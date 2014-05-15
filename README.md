@@ -15,3 +15,6 @@ Some of my thoughts:
 -Vadim
 Some of my thoughts:
 	Trent is being very productive!
+
+	Check out their website, we could replicate some of the features
+	from the website.
