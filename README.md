@@ -11,3 +11,7 @@ Some of my thoughts:
 	User tracking for badge collection:
 	Pack Leader tools for recording commendations, attendance, etc. 
 		Would provide interesting metrics for analysis
+
+-Vadim
+Some of my thoughts:
+	Trent is being very productive!
