@@ -22,6 +22,8 @@ Some of my thoughts:
 	- Side menu bar
 	- RSS news update
 	- Badges collections
+	- *calendar for future events
+	
 	
 
 Our users wishlist.
