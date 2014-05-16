@@ -23,4 +23,12 @@ Some of my thoughts:
 	- RSS news update
 	- Badges collections
 	
+
+Our users wishlist.
+
+Real quick description…one idea is for door to door popcorn sales.  The app would “geolocate” where the Scout is at and they could click “green” if they made a sale or “red” if the resident declined the purchase of popcorn.  This would prevent multiple asks at houses that say no.  It would also build a “book of business” where the Scout could sell to again (in six weeks or the next year).  The app could also assign territories for individuals or groups to prevent multiple asks in areas where we have a large number of Scouts.  A byproduct would be capturing the address, to make delivery when the product comes in easier.  Linking this system to credit card processing would provide an option when someone declined a sale “because they had no cash”.
+
+ 
+
+A very similar mechanism could assist with Scouting for Food.
 	
