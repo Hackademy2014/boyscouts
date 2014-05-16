@@ -18,3 +18,9 @@ Some of my thoughts:
 
 	Check out their website, we could replicate some of the features
 	from the website.
+	
+	- Side menu bar
+	- RSS news update
+	- Badges collections
+	
+	
