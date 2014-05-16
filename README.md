@@ -23,7 +23,7 @@ Some of my thoughts:
 	- RSS news update
 	- Badges collections
 	- *calendar for future events
-	
+	- *fb, twitter, hangout
 	
 
 Our users wishlist.
