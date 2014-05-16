@@ -7,11 +7,15 @@
 //
 
 #import "NHSCAppDelegate.h"
+#import <Parse/Parse.h>
 
 @implementation NHSCAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [Parse setApplicationId:@"3ZZzYfo6sI6gsA12WlOM54E3xKIN3nKuna5gQ7b6"
+                  clientKey:@"nWVSHbKp4jw5YIIePT4mrKvrU9odygGqKlMMpgZX"];
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     return YES;
 }
 

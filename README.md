@@ -19,11 +19,13 @@ Some of my thoughts:
 	Check out their website, we could replicate some of the features
 	from the website.
 	
-	- Side menu bar
-	- RSS news update
-	- Badges collections
+	- maps for selling pop corn
+	- *maps for scouting for food
+	- *in app purchase
+	- *RSS news update
+	- *Badges collections
 	- *calendar for future events
-	
+	- *fb, twitter, hangout
 	
 
 Our users wishlist.
