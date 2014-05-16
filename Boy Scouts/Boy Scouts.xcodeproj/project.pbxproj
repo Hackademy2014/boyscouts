@@ -15,6 +15,8 @@
 		D6821BCF19265B5400C079A7 /* AMSlideMenuRightTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6821BC719265B5400C079A7 /* AMSlideMenuRightTableViewController.m */; };
 		D6821BD019265B5400C079A7 /* UIViewController+AMSlideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = D6821BC919265B5400C079A7 /* UIViewController+AMSlideMenu.m */; };
 		D6821BD219265B6400C079A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6821BD119265B6400C079A7 /* Main.storyboard */; };
+		D6821BD51926689900C079A7 /* NHSCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6821BD41926689900C079A7 /* NHSCMainViewController.m */; };
+		D6821BDB19266B1B00C079A7 /* NHSCLeftMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6821BDA19266B1B00C079A7 /* NHSCLeftMenuTableViewController.m */; };
 		D691187A1926418F00925BB0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D69118791926418F00925BB0 /* Foundation.framework */; };
 		D691187C1926418F00925BB0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D691187B1926418F00925BB0 /* CoreGraphics.framework */; };
 		D691187E1926418F00925BB0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D691187D1926418F00925BB0 /* UIKit.framework */; };
@@ -56,6 +58,10 @@
 		D6821BC819265B5400C079A7 /* UIViewController+AMSlideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+AMSlideMenu.h"; sourceTree = "<group>"; };
 		D6821BC919265B5400C079A7 /* UIViewController+AMSlideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AMSlideMenu.m"; sourceTree = "<group>"; };
 		D6821BD119265B6400C079A7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D6821BD31926689900C079A7 /* NHSCMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NHSCMainViewController.h; sourceTree = "<group>"; };
+		D6821BD41926689900C079A7 /* NHSCMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NHSCMainViewController.m; sourceTree = "<group>"; };
+		D6821BD919266B1B00C079A7 /* NHSCLeftMenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NHSCLeftMenuTableViewController.h; sourceTree = "<group>"; };
+		D6821BDA19266B1B00C079A7 /* NHSCLeftMenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NHSCLeftMenuTableViewController.m; sourceTree = "<group>"; };
 		D69118761926418F00925BB0 /* Boy Scouts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Boy Scouts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D69118791926418F00925BB0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D691187B1926418F00925BB0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -123,6 +129,10 @@
 		D691186D1926418F00925BB0 = {
 			isa = PBXGroup;
 			children = (
+				D6821BD919266B1B00C079A7 /* NHSCLeftMenuTableViewController.h */,
+				D6821BDA19266B1B00C079A7 /* NHSCLeftMenuTableViewController.m */,
+				D6821BD31926689900C079A7 /* NHSCMainViewController.h */,
+				D6821BD41926689900C079A7 /* NHSCMainViewController.m */,
 				D6821BD119265B6400C079A7 /* Main.storyboard */,
 				D6821BBA19265B5400C079A7 /* AMSlideMenu */,
 				D691187F1926418F00925BB0 /* Boy Scouts */,
@@ -292,10 +302,12 @@
 				D6821BCC19265B5400C079A7 /* AMSlideMenuLeftTableViewController.m in Sources */,
 				D6821BCF19265B5400C079A7 /* AMSlideMenuRightTableViewController.m in Sources */,
 				D6821BCE19265B5400C079A7 /* AMSlideMenuRightMenuSegue.m in Sources */,
+				D6821BD51926689900C079A7 /* NHSCMainViewController.m in Sources */,
 				D6821BCA19265B5400C079A7 /* AMSlideMenuContentSegue.m in Sources */,
 				D691188A1926418F00925BB0 /* NHSCAppDelegate.m in Sources */,
 				D6821BCB19265B5400C079A7 /* AMSlideMenuLeftMenuSegue.m in Sources */,
 				D6821BD019265B5400C079A7 /* UIViewController+AMSlideMenu.m in Sources */,
+				D6821BDB19266B1B00C079A7 /* NHSCLeftMenuTableViewController.m in Sources */,
 				D6821BCD19265B5400C079A7 /* AMSlideMenuMainViewController.m in Sources */,
 				D69118861926418F00925BB0 /* main.m in Sources */,
 			);
