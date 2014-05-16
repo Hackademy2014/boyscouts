@@ -40,17 +40,6 @@
 
 //- (NSString *)segueIdentifierForIndexPathInRightMenu:(NSIndexPath *)indexPath
 //{
-//    NSString *identifier = @"";
-//    switch (indexPath.row) {
-//        case 0:
-//            identifier = @"firstRow";
-//            break;
-//        case 1:
-//            identifier = @"secondRow";
-//            break;
-//    }
-//    
-//    return identifier;
 //}
 
 
