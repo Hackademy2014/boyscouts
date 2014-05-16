@@ -1,0 +1,453 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D691187A1926418F00925BB0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D69118791926418F00925BB0 /* Foundation.framework */; };
+		D691187C1926418F00925BB0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D691187B1926418F00925BB0 /* CoreGraphics.framework */; };
+		D691187E1926418F00925BB0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D691187D1926418F00925BB0 /* UIKit.framework */; };
+		D69118841926418F00925BB0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D69118821926418F00925BB0 /* InfoPlist.strings */; };
+		D69118861926418F00925BB0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D69118851926418F00925BB0 /* main.m */; };
+		D691188A1926418F00925BB0 /* NHSCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D69118891926418F00925BB0 /* NHSCAppDelegate.m */; };
+		D691188C1926418F00925BB0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D691188B1926418F00925BB0 /* Images.xcassets */; };
+		D69118931926418F00925BB0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D69118921926418F00925BB0 /* XCTest.framework */; };
+		D69118941926418F00925BB0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D69118791926418F00925BB0 /* Foundation.framework */; };
+		D69118951926418F00925BB0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D691187D1926418F00925BB0 /* UIKit.framework */; };
+		D691189D1926418F00925BB0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D691189B1926418F00925BB0 /* InfoPlist.strings */; };
+		D691189F1926418F00925BB0 /* Boy_ScoutsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D691189E1926418F00925BB0 /* Boy_ScoutsTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D69118961926418F00925BB0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D691186E1926418F00925BB0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D69118751926418F00925BB0;
+			remoteInfo = "Boy Scouts";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D69118761926418F00925BB0 /* Boy Scouts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Boy Scouts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D69118791926418F00925BB0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D691187B1926418F00925BB0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D691187D1926418F00925BB0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D69118811926418F00925BB0 /* Boy Scouts-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Boy Scouts-Info.plist"; sourceTree = "<group>"; };
+		D69118831926418F00925BB0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D69118851926418F00925BB0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D69118871926418F00925BB0 /* Boy Scouts-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Boy Scouts-Prefix.pch"; sourceTree = "<group>"; };
+		D69118881926418F00925BB0 /* NHSCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NHSCAppDelegate.h; sourceTree = "<group>"; };
+		D69118891926418F00925BB0 /* NHSCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NHSCAppDelegate.m; sourceTree = "<group>"; };
+		D691188B1926418F00925BB0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D69118911926418F00925BB0 /* Boy ScoutsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Boy ScoutsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D69118921926418F00925BB0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		D691189A1926418F00925BB0 /* Boy ScoutsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Boy ScoutsTests-Info.plist"; sourceTree = "<group>"; };
+		D691189C1926418F00925BB0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D691189E1926418F00925BB0 /* Boy_ScoutsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Boy_ScoutsTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D69118731926418F00925BB0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D691187C1926418F00925BB0 /* CoreGraphics.framework in Frameworks */,
+				D691187E1926418F00925BB0 /* UIKit.framework in Frameworks */,
+				D691187A1926418F00925BB0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D691188E1926418F00925BB0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D69118931926418F00925BB0 /* XCTest.framework in Frameworks */,
+				D69118951926418F00925BB0 /* UIKit.framework in Frameworks */,
+				D69118941926418F00925BB0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D691186D1926418F00925BB0 = {
+			isa = PBXGroup;
+			children = (
+				D691187F1926418F00925BB0 /* Boy Scouts */,
+				D69118981926418F00925BB0 /* Boy ScoutsTests */,
+				D69118781926418F00925BB0 /* Frameworks */,
+				D69118771926418F00925BB0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D69118771926418F00925BB0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D69118761926418F00925BB0 /* Boy Scouts.app */,
+				D69118911926418F00925BB0 /* Boy ScoutsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D69118781926418F00925BB0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D69118791926418F00925BB0 /* Foundation.framework */,
+				D691187B1926418F00925BB0 /* CoreGraphics.framework */,
+				D691187D1926418F00925BB0 /* UIKit.framework */,
+				D69118921926418F00925BB0 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D691187F1926418F00925BB0 /* Boy Scouts */ = {
+			isa = PBXGroup;
+			children = (
+				D69118881926418F00925BB0 /* NHSCAppDelegate.h */,
+				D69118891926418F00925BB0 /* NHSCAppDelegate.m */,
+				D691188B1926418F00925BB0 /* Images.xcassets */,
+				D69118801926418F00925BB0 /* Supporting Files */,
+			);
+			path = "Boy Scouts";
+			sourceTree = "<group>";
+		};
+		D69118801926418F00925BB0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D69118811926418F00925BB0 /* Boy Scouts-Info.plist */,
+				D69118821926418F00925BB0 /* InfoPlist.strings */,
+				D69118851926418F00925BB0 /* main.m */,
+				D69118871926418F00925BB0 /* Boy Scouts-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D69118981926418F00925BB0 /* Boy ScoutsTests */ = {
+			isa = PBXGroup;
+			children = (
+				D691189E1926418F00925BB0 /* Boy_ScoutsTests.m */,
+				D69118991926418F00925BB0 /* Supporting Files */,
+			);
+			path = "Boy ScoutsTests";
+			sourceTree = "<group>";
+		};
+		D69118991926418F00925BB0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D691189A1926418F00925BB0 /* Boy ScoutsTests-Info.plist */,
+				D691189B1926418F00925BB0 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D69118751926418F00925BB0 /* Boy Scouts */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D69118A21926418F00925BB0 /* Build configuration list for PBXNativeTarget "Boy Scouts" */;
+			buildPhases = (
+				D69118721926418F00925BB0 /* Sources */,
+				D69118731926418F00925BB0 /* Frameworks */,
+				D69118741926418F00925BB0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Boy Scouts";
+			productName = "Boy Scouts";
+			productReference = D69118761926418F00925BB0 /* Boy Scouts.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D69118901926418F00925BB0 /* Boy ScoutsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D69118A51926418F00925BB0 /* Build configuration list for PBXNativeTarget "Boy ScoutsTests" */;
+			buildPhases = (
+				D691188D1926418F00925BB0 /* Sources */,
+				D691188E1926418F00925BB0 /* Frameworks */,
+				D691188F1926418F00925BB0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D69118971926418F00925BB0 /* PBXTargetDependency */,
+			);
+			name = "Boy ScoutsTests";
+			productName = "Boy ScoutsTests";
+			productReference = D69118911926418F00925BB0 /* Boy ScoutsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D691186E1926418F00925BB0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = NHSC;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Daniel Webster Council Boy Scouts of America";
+				TargetAttributes = {
+					D69118901926418F00925BB0 = {
+						TestTargetID = D69118751926418F00925BB0;
+					};
+				};
+			};
+			buildConfigurationList = D69118711926418F00925BB0 /* Build configuration list for PBXProject "Boy Scouts" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D691186D1926418F00925BB0;
+			productRefGroup = D69118771926418F00925BB0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D69118751926418F00925BB0 /* Boy Scouts */,
+				D69118901926418F00925BB0 /* Boy ScoutsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D69118741926418F00925BB0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D69118841926418F00925BB0 /* InfoPlist.strings in Resources */,
+				D691188C1926418F00925BB0 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D691188F1926418F00925BB0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D691189D1926418F00925BB0 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D69118721926418F00925BB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D691188A1926418F00925BB0 /* NHSCAppDelegate.m in Sources */,
+				D69118861926418F00925BB0 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D691188D1926418F00925BB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D691189F1926418F00925BB0 /* Boy_ScoutsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D69118971926418F00925BB0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D69118751926418F00925BB0 /* Boy Scouts */;
+			targetProxy = D69118961926418F00925BB0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D69118821926418F00925BB0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D69118831926418F00925BB0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D691189B1926418F00925BB0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D691189C1926418F00925BB0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D69118A01926418F00925BB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D69118A11926418F00925BB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D69118A31926418F00925BB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Boy Scouts/Boy Scouts-Prefix.pch";
+				INFOPLIST_FILE = "Boy Scouts/Boy Scouts-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D69118A41926418F00925BB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Boy Scouts/Boy Scouts-Prefix.pch";
+				INFOPLIST_FILE = "Boy Scouts/Boy Scouts-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		D69118A61926418F00925BB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Boy Scouts.app/Boy Scouts";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Boy Scouts/Boy Scouts-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Boy ScoutsTests/Boy ScoutsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		D69118A71926418F00925BB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Boy Scouts.app/Boy Scouts";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Boy Scouts/Boy Scouts-Prefix.pch";
+				INFOPLIST_FILE = "Boy ScoutsTests/Boy ScoutsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D69118711926418F00925BB0 /* Build configuration list for PBXProject "Boy Scouts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D69118A01926418F00925BB0 /* Debug */,
+				D69118A11926418F00925BB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D69118A21926418F00925BB0 /* Build configuration list for PBXNativeTarget "Boy Scouts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D69118A31926418F00925BB0 /* Debug */,
+				D69118A41926418F00925BB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D69118A51926418F00925BB0 /* Build configuration list for PBXNativeTarget "Boy ScoutsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D69118A61926418F00925BB0 /* Debug */,
+				D69118A71926418F00925BB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D691186E1926418F00925BB0 /* Project object */;
+}
