@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		752A1E0D192684A800D211B1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752A1E0C192684A800D211B1 /* MapKit.framework */; };
 		D6821BCA19265B5400C079A7 /* AMSlideMenuContentSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D6821BBC19265B5400C079A7 /* AMSlideMenuContentSegue.m */; };
 		D6821BCB19265B5400C079A7 /* AMSlideMenuLeftMenuSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D6821BBE19265B5400C079A7 /* AMSlideMenuLeftMenuSegue.m */; };
 		D6821BCC19265B5400C079A7 /* AMSlideMenuLeftTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6821BC019265B5400C079A7 /* AMSlideMenuLeftTableViewController.m */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		752A1E0C192684A800D211B1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D6821BBB19265B5400C079A7 /* AMSlideMenuContentSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSlideMenuContentSegue.h; sourceTree = "<group>"; };
 		D6821BBC19265B5400C079A7 /* AMSlideMenuContentSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMSlideMenuContentSegue.m; sourceTree = "<group>"; };
 		D6821BBD19265B5400C079A7 /* AMSlideMenuLeftMenuSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSlideMenuLeftMenuSegue.h; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			files = (
 				D691187C1926418F00925BB0 /* CoreGraphics.framework in Frameworks */,
 				D691187E1926418F00925BB0 /* UIKit.framework in Frameworks */,
+				752A1E0D192684A800D211B1 /* MapKit.framework in Frameworks */,
 				D691187A1926418F00925BB0 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -158,6 +161,7 @@
 		D69118781926418F00925BB0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				752A1E0C192684A800D211B1 /* MapKit.framework */,
 				D69118791926418F00925BB0 /* Foundation.framework */,
 				D691187B1926418F00925BB0 /* CoreGraphics.framework */,
 				D691187D1926418F00925BB0 /* UIKit.framework */,
@@ -256,6 +260,13 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Daniel Webster Council Boy Scouts of America";
 				TargetAttributes = {
+					D69118751926418F00925BB0 = {
+						SystemCapabilities = {
+							com.apple.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 					D69118901926418F00925BB0 = {
 						TestTargetID = D69118751926418F00925BB0;
 					};
