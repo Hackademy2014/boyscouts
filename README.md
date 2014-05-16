@@ -18,3 +18,6 @@ Some of my thoughts:
 
 	Check out their website, we could replicate some of the features
 	from the website.
+	
+	Some comments
+	
