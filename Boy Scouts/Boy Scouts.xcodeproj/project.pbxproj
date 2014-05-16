@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D6821BCA19265B5400C079A7 /* AMSlideMenuContentSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D6821BBC19265B5400C079A7 /* AMSlideMenuContentSegue.m */; };
+		D6821BCB19265B5400C079A7 /* AMSlideMenuLeftMenuSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D6821BBE19265B5400C079A7 /* AMSlideMenuLeftMenuSegue.m */; };
+		D6821BCC19265B5400C079A7 /* AMSlideMenuLeftTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6821BC019265B5400C079A7 /* AMSlideMenuLeftTableViewController.m */; };
+		D6821BCD19265B5400C079A7 /* AMSlideMenuMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6821BC219265B5400C079A7 /* AMSlideMenuMainViewController.m */; };
+		D6821BCE19265B5400C079A7 /* AMSlideMenuRightMenuSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D6821BC519265B5400C079A7 /* AMSlideMenuRightMenuSegue.m */; };
+		D6821BCF19265B5400C079A7 /* AMSlideMenuRightTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6821BC719265B5400C079A7 /* AMSlideMenuRightTableViewController.m */; };
+		D6821BD019265B5400C079A7 /* UIViewController+AMSlideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = D6821BC919265B5400C079A7 /* UIViewController+AMSlideMenu.m */; };
+		D6821BD219265B6400C079A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6821BD119265B6400C079A7 /* Main.storyboard */; };
 		D691187A1926418F00925BB0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D69118791926418F00925BB0 /* Foundation.framework */; };
 		D691187C1926418F00925BB0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D691187B1926418F00925BB0 /* CoreGraphics.framework */; };
 		D691187E1926418F00925BB0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D691187D1926418F00925BB0 /* UIKit.framework */; };
@@ -32,6 +40,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D6821BBB19265B5400C079A7 /* AMSlideMenuContentSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSlideMenuContentSegue.h; sourceTree = "<group>"; };
+		D6821BBC19265B5400C079A7 /* AMSlideMenuContentSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMSlideMenuContentSegue.m; sourceTree = "<group>"; };
+		D6821BBD19265B5400C079A7 /* AMSlideMenuLeftMenuSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSlideMenuLeftMenuSegue.h; sourceTree = "<group>"; };
+		D6821BBE19265B5400C079A7 /* AMSlideMenuLeftMenuSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMSlideMenuLeftMenuSegue.m; sourceTree = "<group>"; };
+		D6821BBF19265B5400C079A7 /* AMSlideMenuLeftTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSlideMenuLeftTableViewController.h; sourceTree = "<group>"; };
+		D6821BC019265B5400C079A7 /* AMSlideMenuLeftTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMSlideMenuLeftTableViewController.m; sourceTree = "<group>"; };
+		D6821BC119265B5400C079A7 /* AMSlideMenuMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSlideMenuMainViewController.h; sourceTree = "<group>"; };
+		D6821BC219265B5400C079A7 /* AMSlideMenuMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMSlideMenuMainViewController.m; sourceTree = "<group>"; };
+		D6821BC319265B5400C079A7 /* AMSlideMenuProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSlideMenuProtocols.h; sourceTree = "<group>"; };
+		D6821BC419265B5400C079A7 /* AMSlideMenuRightMenuSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSlideMenuRightMenuSegue.h; sourceTree = "<group>"; };
+		D6821BC519265B5400C079A7 /* AMSlideMenuRightMenuSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMSlideMenuRightMenuSegue.m; sourceTree = "<group>"; };
+		D6821BC619265B5400C079A7 /* AMSlideMenuRightTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSlideMenuRightTableViewController.h; sourceTree = "<group>"; };
+		D6821BC719265B5400C079A7 /* AMSlideMenuRightTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMSlideMenuRightTableViewController.m; sourceTree = "<group>"; };
+		D6821BC819265B5400C079A7 /* UIViewController+AMSlideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+AMSlideMenu.h"; sourceTree = "<group>"; };
+		D6821BC919265B5400C079A7 /* UIViewController+AMSlideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AMSlideMenu.m"; sourceTree = "<group>"; };
+		D6821BD119265B6400C079A7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		D69118761926418F00925BB0 /* Boy Scouts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Boy Scouts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D69118791926418F00925BB0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D691187B1926418F00925BB0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -74,9 +98,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D6821BBA19265B5400C079A7 /* AMSlideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				D6821BBB19265B5400C079A7 /* AMSlideMenuContentSegue.h */,
+				D6821BBC19265B5400C079A7 /* AMSlideMenuContentSegue.m */,
+				D6821BBD19265B5400C079A7 /* AMSlideMenuLeftMenuSegue.h */,
+				D6821BBE19265B5400C079A7 /* AMSlideMenuLeftMenuSegue.m */,
+				D6821BBF19265B5400C079A7 /* AMSlideMenuLeftTableViewController.h */,
+				D6821BC019265B5400C079A7 /* AMSlideMenuLeftTableViewController.m */,
+				D6821BC119265B5400C079A7 /* AMSlideMenuMainViewController.h */,
+				D6821BC219265B5400C079A7 /* AMSlideMenuMainViewController.m */,
+				D6821BC319265B5400C079A7 /* AMSlideMenuProtocols.h */,
+				D6821BC419265B5400C079A7 /* AMSlideMenuRightMenuSegue.h */,
+				D6821BC519265B5400C079A7 /* AMSlideMenuRightMenuSegue.m */,
+				D6821BC619265B5400C079A7 /* AMSlideMenuRightTableViewController.h */,
+				D6821BC719265B5400C079A7 /* AMSlideMenuRightTableViewController.m */,
+				D6821BC819265B5400C079A7 /* UIViewController+AMSlideMenu.h */,
+				D6821BC919265B5400C079A7 /* UIViewController+AMSlideMenu.m */,
+			);
+			path = AMSlideMenu;
+			sourceTree = "<group>";
+		};
 		D691186D1926418F00925BB0 = {
 			isa = PBXGroup;
 			children = (
+				D6821BD119265B6400C079A7 /* Main.storyboard */,
+				D6821BBA19265B5400C079A7 /* AMSlideMenu */,
 				D691187F1926418F00925BB0 /* Boy Scouts */,
 				D69118981926418F00925BB0 /* Boy ScoutsTests */,
 				D69118781926418F00925BB0 /* Frameworks */,
@@ -220,6 +268,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6821BD219265B6400C079A7 /* Main.storyboard in Resources */,
 				D69118841926418F00925BB0 /* InfoPlist.strings in Resources */,
 				D691188C1926418F00925BB0 /* Images.xcassets in Resources */,
 			);
@@ -240,7 +289,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6821BCC19265B5400C079A7 /* AMSlideMenuLeftTableViewController.m in Sources */,
+				D6821BCF19265B5400C079A7 /* AMSlideMenuRightTableViewController.m in Sources */,
+				D6821BCE19265B5400C079A7 /* AMSlideMenuRightMenuSegue.m in Sources */,
+				D6821BCA19265B5400C079A7 /* AMSlideMenuContentSegue.m in Sources */,
 				D691188A1926418F00925BB0 /* NHSCAppDelegate.m in Sources */,
+				D6821BCB19265B5400C079A7 /* AMSlideMenuLeftMenuSegue.m in Sources */,
+				D6821BD019265B5400C079A7 /* UIViewController+AMSlideMenu.m in Sources */,
+				D6821BCD19265B5400C079A7 /* AMSlideMenuMainViewController.m in Sources */,
 				D69118861926418F00925BB0 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,6 +494,7 @@
 				D69118A41926418F00925BB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D69118A51926418F00925BB0 /* Build configuration list for PBXNativeTarget "Boy ScoutsTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +503,7 @@
 				D69118A71926418F00925BB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
