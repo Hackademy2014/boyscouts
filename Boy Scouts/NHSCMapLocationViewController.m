@@ -7,6 +7,7 @@
 //
 
 #import "NHSCMapLocationViewController.h"
+#import "NHSCPlaceAnnotation.h"
 
 @interface NHSCMapLocationViewController ()
 
@@ -32,8 +33,48 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
     [_mapView setDelegate:self];
+
+    [self setInitialAnnotation];
+}
+
+/*
+ * Finds the nearby locations that have record for the popcorn
+ */
+- (void)setInitialAnnotation {
+    // Find locations around from backend
+    PFQuery *query = [PFQuery queryWithClassName:@"PopcornVisits"];
+    
+    // locations should be within a range
+    
+    query.limit = 10;
+    
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray *visits, NSError *error) {
+        if (!error) {
+            // populate the visits to the view
+            // The find succeeded.
+            NSLog(@"Successfully retrieved %lu scores.", (unsigned long)visits.count);
+            // Do something with the found objects
+            for (PFObject *visit in visits) {
+                double latitude = [visit[@"latitude"] doubleValue];
+                double longitude = [visit[@"longitude"] doubleValue];
+                NSString *title = visit[@"address"];
+            
+                // creates annotations on the map
+                CLLocationCoordinate2D visitCoordinate = CLLocationCoordinate2DMake(latitude, longitude);
+                
+                NHSCPlaceAnnotation *pin = [[NHSCPlaceAnnotation alloc] init];
+                pin.coordinate = visitCoordinate;
+                pin.title = title;
+                [self.mapView addAnnotation:pin];
+            }
+        } else {
+            // error
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
