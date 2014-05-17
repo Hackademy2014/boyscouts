@@ -156,6 +156,9 @@
                                 <state key="normal" title="X">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="noPopcornButtonClicked:" destination="OnZ-eO-0lA" eventType="touchUpInside" id="DBV-jq-pQO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KXl-9c-Kxb">
                                 <rect key="frame" x="0.0" y="523" width="160" height="45"/>
@@ -164,12 +167,19 @@
                                 <state key="normal" title="Check">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="checkButtonClicked:" destination="OnZ-eO-0lA" eventType="touchUpInside" id="2IM-w9-jRX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Popcorn Locations" id="yei-XH-yAE">
-                        <barButtonItem key="rightBarButtonItem" image="UIButtonBarRefresh.png" id="Av2-uM-1qC"/>
+                        <barButtonItem key="rightBarButtonItem" image="UIButtonBarRefresh.png" id="Av2-uM-1qC">
+                            <connections>
+                                <action selector="refreshButtonClicked:" destination="OnZ-eO-0lA" id="xRS-nm-NbD"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="2lT-X8-yVo" id="XIP-8B-y25"/>

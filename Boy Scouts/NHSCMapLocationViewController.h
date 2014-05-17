@@ -22,5 +22,7 @@
 @property (nonatomic, strong) NSArray *places;
 
 - (IBAction)refreshButtonClicked:(id)sender;
+- (IBAction)checkButtonClicked:(id)sender;
+- (IBAction)noPopcornButtonClicked:(id)sender;
 
 @end

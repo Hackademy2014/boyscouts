@@ -74,6 +74,15 @@
     // implement this later
 }
 
+- (IBAction)checkButtonClicked:(id)sender {
+    // implement this later
+    // check out how to use logger 
+}
+
+- (IBAction)noPopcornButtonClicked:(id)sender {
+    // implement this later
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
