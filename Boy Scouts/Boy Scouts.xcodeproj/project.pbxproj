@@ -30,6 +30,10 @@
 		D6821BEF1926927600C079A7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6821BEE1926927600C079A7 /* Security.framework */; };
 		D6821BF11926928200C079A7 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6821BF01926928200C079A7 /* StoreKit.framework */; };
 		D6821BF31926928800C079A7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6821BF21926928800C079A7 /* SystemConfiguration.framework */; };
+		D6821BF61926F4CE00C079A7 /* NHSCMapLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6821BF51926F4CE00C079A7 /* NHSCMapLocationViewController.m */; };
+		D6821BF91926F63E00C079A7 /* NHSCPlaceAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = D6821BF81926F63E00C079A7 /* NHSCPlaceAnnotation.m */; };
+		D6821BFD1926FF0400C079A7 /* UIButtonBarRefresh.png in Resources */ = {isa = PBXBuildFile; fileRef = D6821BFB1926FF0400C079A7 /* UIButtonBarRefresh.png */; };
+		D6821BFE1926FF0400C079A7 /* UIButtonBarRefresh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6821BFC1926FF0400C079A7 /* UIButtonBarRefresh@2x.png */; };
 		D691187A1926418F00925BB0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D69118791926418F00925BB0 /* Foundation.framework */; };
 		D691187C1926418F00925BB0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D691187B1926418F00925BB0 /* CoreGraphics.framework */; };
 		D691187E1926418F00925BB0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D691187D1926418F00925BB0 /* UIKit.framework */; };
@@ -88,6 +92,12 @@
 		D6821BEE1926927600C079A7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		D6821BF01926928200C079A7 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		D6821BF21926928800C079A7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D6821BF41926F4CE00C079A7 /* NHSCMapLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NHSCMapLocationViewController.h; sourceTree = "<group>"; };
+		D6821BF51926F4CE00C079A7 /* NHSCMapLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NHSCMapLocationViewController.m; sourceTree = "<group>"; };
+		D6821BF71926F63E00C079A7 /* NHSCPlaceAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NHSCPlaceAnnotation.h; sourceTree = "<group>"; };
+		D6821BF81926F63E00C079A7 /* NHSCPlaceAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NHSCPlaceAnnotation.m; sourceTree = "<group>"; };
+		D6821BFB1926FF0400C079A7 /* UIButtonBarRefresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = UIButtonBarRefresh.png; path = ../../../../Downloads/Files/UIButtonBarRefresh.png; sourceTree = "<group>"; };
+		D6821BFC1926FF0400C079A7 /* UIButtonBarRefresh@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "UIButtonBarRefresh@2x.png"; path = "../../../../Downloads/Files/UIButtonBarRefresh@2x.png"; sourceTree = "<group>"; };
 		D69118761926418F00925BB0 /* Boy Scouts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Boy Scouts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D69118791926418F00925BB0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D691187B1926418F00925BB0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -163,9 +173,21 @@
 			path = AMSlideMenu;
 			sourceTree = "<group>";
 		};
+		D6821BFA1926F64700C079A7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D6821BF71926F63E00C079A7 /* NHSCPlaceAnnotation.h */,
+				D6821BF81926F63E00C079A7 /* NHSCPlaceAnnotation.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		D691186D1926418F00925BB0 = {
 			isa = PBXGroup;
 			children = (
+				D6821BFA1926F64700C079A7 /* Model */,
+				D6821BF41926F4CE00C079A7 /* NHSCMapLocationViewController.h */,
+				D6821BF51926F4CE00C079A7 /* NHSCMapLocationViewController.m */,
 				D6821BD919266B1B00C079A7 /* NHSCLeftMenuTableViewController.h */,
 				D6821BDA19266B1B00C079A7 /* NHSCLeftMenuTableViewController.m */,
 				D6821BD31926689900C079A7 /* NHSCMainViewController.h */,
@@ -224,6 +246,8 @@
 		D69118801926418F00925BB0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D6821BFB1926FF0400C079A7 /* UIButtonBarRefresh.png */,
+				D6821BFC1926FF0400C079A7 /* UIButtonBarRefresh@2x.png */,
 				D6821BDC1926839D00C079A7 /* simpleMenuButton.png */,
 				D6821BDD1926839D00C079A7 /* simpleMenuButton@2x.png */,
 				D69118811926418F00925BB0 /* Boy Scouts-Info.plist */,
@@ -336,8 +360,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6821BD219265B6400C079A7 /* Main.storyboard in Resources */,
+				D6821BFD1926FF0400C079A7 /* UIButtonBarRefresh.png in Resources */,
 				D69118841926418F00925BB0 /* InfoPlist.strings in Resources */,
 				D6821BDF1926839D00C079A7 /* simpleMenuButton@2x.png in Resources */,
+				D6821BFE1926FF0400C079A7 /* UIButtonBarRefresh@2x.png in Resources */,
 				D6821BDE1926839D00C079A7 /* simpleMenuButton.png in Resources */,
 				D691188C1926418F00925BB0 /* Images.xcassets in Resources */,
 			);
@@ -360,8 +386,10 @@
 			files = (
 				D6821BCC19265B5400C079A7 /* AMSlideMenuLeftTableViewController.m in Sources */,
 				D6821BCF19265B5400C079A7 /* AMSlideMenuRightTableViewController.m in Sources */,
+				D6821BF91926F63E00C079A7 /* NHSCPlaceAnnotation.m in Sources */,
 				D6821BCE19265B5400C079A7 /* AMSlideMenuRightMenuSegue.m in Sources */,
 				D6821BD51926689900C079A7 /* NHSCMainViewController.m in Sources */,
+				D6821BF61926F4CE00C079A7 /* NHSCMapLocationViewController.m in Sources */,
 				D6821BCA19265B5400C079A7 /* AMSlideMenuContentSegue.m in Sources */,
 				D691188A1926418F00925BB0 /* NHSCAppDelegate.m in Sources */,
 				D6821BCB19265B5400C079A7 /* AMSlideMenuLeftMenuSegue.m in Sources */,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hoJ-YK-dYh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hoJ-YK-dYh">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -132,10 +132,10 @@
             </objects>
             <point key="canvasLocation" x="1911" y="641"/>
         </scene>
-        <!--View Controller-->
+        <!--Map Location View Controller - Popcorn Locations-->
         <scene sceneID="naE-Nf-ZLV">
             <objects>
-                <viewController id="OnZ-eO-0lA" sceneMemberID="viewController">
+                <viewController id="OnZ-eO-0lA" customClass="NHSCMapLocationViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dad-gL-7XN"/>
                         <viewControllerLayoutGuide type="bottom" id="djN-Ch-que"/>
@@ -165,7 +165,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="yei-XH-yAE"/>
+                    <navigationItem key="navigationItem" title="Popcorn Locations" id="yei-XH-yAE">
+                        <barButtonItem key="rightBarButtonItem" image="UIButtonBarRefresh.png" id="Av2-uM-1qC"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="2lT-X8-yVo" id="XIP-8B-y25"/>
+                        <outlet property="refreshButton" destination="Av2-uM-1qC" id="lhP-Ji-rTk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tbd-Mi-D3w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -208,6 +214,9 @@
             <point key="canvasLocation" x="1385" y="-511"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="UIButtonBarRefresh.png" width="18" height="22"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
