@@ -33,7 +33,6 @@
 {
     [super viewDidLoad];
     
-    
     [_mapView setDelegate:self];
 }
 
@@ -134,19 +133,12 @@
  */
 -(NSString *)getAddressFromLatLon:(double)pdblLatitude withLongitude:(double)pdblLongitude
 {
-    //key arg: &key=AIzaSyBKYuW9J2M9tAh2ZdxrYkz2N9UY-mSe4gI
-    //    NSData *dataUrl = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlString]];
-    //    NSArray *readJsonArray = [NSJSONSerialization JSONObjectWithData:dataUrl options:0 error:0];
-    //    NSDictionary *element1 = readJsonArray[0][0];
-    //    NSString *address = element1[@"formatted_address"];
-    //    NSLog(@"%@", address);
-    //    return address;
-    //    locationString = [locationString stringByReplacingOccurrencesOfString:@"\"" withString:@""];
-    //    locationString = [locationString substringFromIndex:6];
     NSString *address;
     NSError* error;
     
     // retrieve the name for the location
+    // ****************************** This URL is for the Google Map API *******************************
+    // For future application, please use official api key
     NSString *urlString = [NSString stringWithFormat: @"https://maps.googleapis.com/maps/api/geocode/json?latlng=%f,%f&sensor=true", pdblLatitude, pdblLongitude];
     NSString *locationString = [NSString stringWithContentsOfURL:[NSURL URLWithString:urlString] encoding:NSASCIIStringEncoding error:&error];
 
