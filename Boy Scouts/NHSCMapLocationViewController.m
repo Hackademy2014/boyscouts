@@ -36,6 +36,7 @@
 
     [_mapView setDelegate:self];
 
+    // sets the annotaions
     [self setInitialAnnotation];
 }
 
@@ -61,13 +62,22 @@
                 double latitude = [visit[@"latitude"] doubleValue];
                 double longitude = [visit[@"longitude"] doubleValue];
                 NSString *title = visit[@"address"];
+                BOOL reaction = [visit[@"reaction"] boolValue];
             
-                // creates annotations on the map
+                // creates annotation
                 CLLocationCoordinate2D visitCoordinate = CLLocationCoordinate2DMake(latitude, longitude);
                 
                 NHSCPlaceAnnotation *pin = [[NHSCPlaceAnnotation alloc] init];
                 pin.coordinate = visitCoordinate;
                 pin.title = title;
+                pin.reaction = reaction;
+                
+                // change the pin color based on the reaction
+                if (reaction == YES) {
+                    
+                }
+                
+                // adds annotation to the map
                 [self.mapView addAnnotation:pin];
             }
         } else {
@@ -276,6 +286,32 @@
     // remove us as delegate so we don't re-center map each time user moves
     //mapView.delegate = nil;
 }
+
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(NHSCPlaceAnnotation*)annotation {
+    if([annotation isKindOfClass:[MKUserLocation class]])
+        return nil;
+    
+    static NSString *identifier = @"myAnnotation";
+    MKPinAnnotationView * annotationView = (MKPinAnnotationView*)[self.mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
+    if (!annotationView)
+    {
+        annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
+        annotationView.animatesDrop = YES;
+        annotationView.canShowCallout = YES;
+        
+        // set the color of the pin
+        if (annotation.reaction == YES) {
+            annotationView.pinColor = MKPinAnnotationColorGreen;
+        }
+        
+    }else {
+        annotationView.annotation = annotation;
+    }
+    annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    return annotationView;
+}
+
 
 /*
  #pragma mark - Navigation

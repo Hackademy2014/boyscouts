@@ -13,6 +13,7 @@
 @property (nonatomic, assign) CLLocationCoordinate2D coordinate;
 @property (nonatomic, retain) NSString *title;
 @property (nonatomic, retain) NSString *subTitle;
+@property (atomic) BOOL reaction;
 @property (nonatomic, retain) NSURL *url;
 
 @end
