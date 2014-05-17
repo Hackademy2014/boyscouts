@@ -7,6 +7,7 @@
 //
 
 #import "AMSlideMenuMainViewController.h"
+//#import <Parse/Parse.h>
 
 @interface NHSCMainViewController : AMSlideMenuMainViewController
 
