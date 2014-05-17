@@ -26,6 +26,7 @@ Some of my thoughts:
 	- *Badges collections
 	- *calendar for future events
 	- *fb, twitter, hangout
+	- *how to use guide
 	
 
 Our users wishlist.
