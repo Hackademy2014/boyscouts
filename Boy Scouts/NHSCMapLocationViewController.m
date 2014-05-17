@@ -34,16 +34,27 @@
 {
     [super viewDidLoad];
 
-    [_mapView setDelegate:self];
-
+    self.mapView.delegate = self;
+    
     // sets the annotaions
-    [self setInitialAnnotation];
+    [self displayAnnotations];
+    
+    // initialize current location if necessary
+    if (!currentLocation) {
+        currentLocation = [self.mapView userLocation];
+        region = MKCoordinateRegionMakeWithDistance(currentLocation.location.coordinate, 500, 500);
+        [self.mapView setRegion:region animated:NO];
+    }
 }
 
 /*
  * Finds the nearby locations that have record for the popcorn
  */
-- (void)setInitialAnnotation {
+- (void)displayAnnotations {
+    
+    // remove all annocations
+    [self.mapView removeAnnotations:self.mapView.annotations];
+    
     // Find locations around from backend
     PFQuery *query = [PFQuery queryWithClassName:@"PopcornVisits"];
     
@@ -71,11 +82,6 @@
                 pin.coordinate = visitCoordinate;
                 pin.title = title;
                 pin.reaction = reaction;
-                
-                // change the pin color based on the reaction
-                if (reaction == YES) {
-                    
-                }
                 
                 // adds annotation to the map
                 [self.mapView addAnnotation:pin];
@@ -121,71 +127,6 @@
     }
 }
 
-// center the user's current location in the map view
-- (IBAction)locateButtonClicked:(id)sender {
-    region = MKCoordinateRegionMakeWithDistance(currentLocation.location.coordinate, 500, 500);
-    [self.mapView setRegion:region animated:YES];
-}
-
-/*
- * Stores user's location and reaction to the database
- */
-- (IBAction)checkButtonClicked:(id)sender {
-    
-    // check if location is null;
-    if (currentLocation == nil) {
-        // handle this properly
-        return;
-    }
-    
-    // latitude and longtitude
-    NSNumber *latitude = [NSNumber numberWithDouble: currentLocation.location.coordinate.latitude];
-    NSNumber *longtitude = [NSNumber numberWithDouble: currentLocation.location.coordinate.longitude];
-    
-    // location should be saved into the database
-    NSLog(@"%@", latitude);
-    NSLog(@"%@", longtitude);
-    
-    // get the formatted address from Google
-    NSString *address = [self getAddressFromLatLon:currentLocation.location.coordinate.latitude withLongitude:currentLocation.location.coordinate.longitude];
-    
-    // query to see if the location has been stored
-    PFQuery *query = [PFQuery queryWithClassName:@"PopcornVisits"];
-    //    [query whereKey:@"latitude" equalTo:latitude];
-    //    [query whereKey:@"longtitude" equalTo:longtitude];
-    [query whereKey:@"address" equalTo:address];
-    
-    // fire the request to the our back end
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (!error) {
-            // The find succeeded.
-            NSLog(@"Successfully retrieved %lu scores.", (unsigned long)objects.count);
-            if (objects.count == 0) {
-                // no previous entry is in the database.
-                // save data to database
-                PFObject *visit = [PFObject objectWithClassName:@"PopcornVisits"];
-                visit[@"latitude"] = latitude;
-                visit[@"longitude"] = longtitude;
-                visit[@"reaction"] = @YES;
-                visit[@"address"] = address;
-                [visit saveInBackground];
-            } else {
-                // do nothing
-                for (PFObject *object in objects) {
-                    NSLog(@"%@", object.objectId);
-                }
-            }
-            // Do something with the found objects
-            //            for (PFObject *object in objects) {
-            //                NSLog(@"%@", object.objectId);
-            //            }
-        } else {
-            // Log details of the failure
-            NSLog(@"Error: %@ %@", error, [error userInfo]);
-        }
-    }];
-}
-
 /*
  * get the address from location
  */
@@ -210,6 +151,85 @@
     }
     
     return address;
+}
+
+// center the user's current location in the map view
+- (IBAction)locateButtonClicked:(id)sender {
+    region = MKCoordinateRegionMakeWithDistance(currentLocation.location.coordinate, 500, 500);
+    [self.mapView setRegion:region animated:YES];
+}
+
+/*
+ * Stores user's location and reaction to the database
+ */
+- (IBAction)checkButtonClicked:(id)sender {
+    
+    // check if location is null;
+    if (currentLocation == nil) {
+        // handle this properly
+        return;
+    }
+    
+    // latitude and longtitude
+    NSNumber *latitude = [NSNumber numberWithDouble: currentLocation.location.coordinate.latitude];
+    NSNumber *longtitude = [NSNumber numberWithDouble: currentLocation.location.coordinate.longitude];
+    
+    // get the formatted address from Google
+    NSString *address = [self getAddressFromLatLon:currentLocation.location.coordinate.latitude withLongitude:currentLocation.location.coordinate.longitude];
+    
+    // query to see if the location has been stored
+    PFQuery *query = [PFQuery queryWithClassName:@"PopcornVisits"];
+    //    [query whereKey:@"latitude" equalTo:latitude];
+    //    [query whereKey:@"longtitude" equalTo:longtitude];
+    [query whereKey:@"address" equalTo:address];
+    
+    // fire the request to the our back end
+    [query findObjectsInBackgroundWithBlock:^(NSArray *visits, NSError *error) {
+        if (!error) {
+            // The find succeeded.
+            NSLog(@"Successfully retrieved %lu scores.", (unsigned long)visits.count);
+            if (visits.count == 0) {
+                // no previous entry is in the database.
+                // save new data to database
+                PFObject *visit = [PFObject objectWithClassName:@"PopcornVisits"];
+                visit[@"latitude"] = latitude;
+                visit[@"longitude"] = longtitude;
+                visit[@"reaction"] = @YES;
+                visit[@"address"] = address;
+                [visit saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                    if(succeeded) {
+                        [self displayAnnotations];
+                    }
+                }];
+                
+                // add annotation to the map
+//                [self displayAnnotations];
+            } else if (visits.count == 1) {
+                NSLog(@"here");
+                // update the reactino if necessary
+                for (PFObject *visit in visits) {
+                    if ([visit[@"reaction"]  isEqual: @NO]) {
+                        visit[@"reaction"] = @YES;
+                        [visit saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                            if(succeeded) {
+                                [self displayAnnotations];
+                            } else {
+                                NSLog(@"some other error");
+                            }
+                        }];
+                    }
+                }
+                
+                // update the annotation to the map
+                
+            } else {
+                // multiple instances, should do nothing
+            }
+        } else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
 }
 
 - (IBAction)noPopcornButtonClicked:(id)sender {
@@ -246,20 +266,36 @@
                 visit[@"longitude"] = longtitude;
                 visit[@"reaction"] = @NO;
                 visit[@"address"] = address;
-                [visit saveInBackground];
+//                [visit saveInBackground];
+                
+                [visit saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                    if(succeeded) {
+                        [self displayAnnotations];
+                    }
+                }];
+                
+                // add annotations
+
             } else if (visits.count == 1) {
                 // update the reactino if necessary
+                NSLog(@"No button");
                 for (PFObject *visit in visits) {
                     if ([visit[@"reaction"]  isEqual: @YES]) {
                         visit[@"reaction"] = @NO;
-                        [visit saveInBackground];
+                        [visit saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                            if(succeeded) {
+                                [self displayAnnotations];
+                            } else {
+                                NSLog(@"some error");
+                            }
+                        }];
                     }
                 }
+//                // update annotations
+//                [self displayAnnotations];
+            } else {
+                // multiple instances, should do nothing
             }
-            // Do something with the found objects
-            //            for (PFObject *object in objects) {
-            //                NSLog(@"%@", object.objectId);
-            //            }
         } else {
             // Log details of the failure
             NSLog(@"Error: %@ %@", error, [error userInfo]);
@@ -297,17 +333,19 @@
     if (!annotationView)
     {
         annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
-        annotationView.animatesDrop = YES;
+        annotationView.animatesDrop = NO;
         annotationView.canShowCallout = YES;
-        
-        // set the color of the pin
-        if (annotation.reaction == YES) {
-            annotationView.pinColor = MKPinAnnotationColorGreen;
-        }
-        
     }else {
         annotationView.annotation = annotation;
     }
+    
+    // set the color of the pin
+    if (annotation.reaction == YES) {
+        annotationView.pinColor = MKPinAnnotationColorGreen;
+    } else {
+        annotationView.pinColor = MKPinAnnotationColorRed;
+    }
+    
     annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
     return annotationView;
 }
