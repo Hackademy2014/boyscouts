@@ -105,10 +105,10 @@
             </objects>
             <point key="canvasLocation" x="579" y="34"/>
         </scene>
-        <!--View Controller-->
+        <!--Donation Map Location View Controller - Food Donation-->
         <scene sceneID="wU1-tb-azP">
             <objects>
-                <viewController id="90f-VD-MmA" sceneMemberID="viewController">
+                <viewController id="90f-VD-MmA" customClass="NHSCDonationMapLocationViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qOo-zn-3Dn"/>
                         <viewControllerLayoutGuide type="bottom" id="sKd-1s-Uvm"/>
@@ -117,17 +117,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Food Donation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o7V-JF-cCq">
-                                <rect key="frame" x="103" y="273" width="114" height="21"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MvE-HS-47W">
+                                <rect key="frame" x="0.0" y="63" width="320" height="461"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pXm-uK-mLN">
+                                <rect key="frame" x="0.0" y="523" width="320" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <state key="normal" title="I will pick up food here next week!"/>
+                                <connections>
+                                    <action selector="pickButtonClicked:" destination="90f-VD-MmA" eventType="touchUpInside" id="b4u-Kd-zZd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="xsd-rf-7Gu"/>
+                    <navigationItem key="navigationItem" title="Food Donation" id="xsd-rf-7Gu"/>
+                    <connections>
+                        <outlet property="mapView" destination="MvE-HS-47W" id="qbq-Oa-vo7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rr3-Tw-zUj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -146,7 +154,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2lT-X8-yVo">
-                                <rect key="frame" x="0.0" y="57" width="320" height="469"/>
+                                <rect key="frame" x="0.0" y="63" width="320" height="461"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJi-cA-H9H">

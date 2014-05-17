@@ -31,6 +31,7 @@
 {
     [super viewDidLoad];
 
+    // set itself to be the delegate of the map view
     self.mapView.delegate = self;
     
     // sets the annotaions
@@ -320,7 +321,9 @@
     //mapView.delegate = nil;
 }
 
-
+/*
+ * customize annotation
+ */
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(NHSCPlaceAnnotation*)annotation {
     if([annotation isKindOfClass:[MKUserLocation class]])
         return nil;
