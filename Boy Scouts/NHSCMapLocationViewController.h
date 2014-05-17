@@ -23,7 +23,7 @@
 @property (nonatomic, strong) NSArray *places;
 @property (nonatomic, strong) MKUserLocation *currentLocation;
 
-- (IBAction)refreshButtonClicked:(id)sender;
+- (IBAction)locateButtonClicked:(id)sender;
 - (IBAction)checkButtonClicked:(id)sender;
 - (IBAction)noPopcornButtonClicked:(id)sender;
 

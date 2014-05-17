@@ -70,23 +70,26 @@
     }
 }
 
-- (IBAction)refreshButtonClicked:(id)sender {
-    // implement this later
+// center the user's current location in the map view
+- (IBAction)locateButtonClicked:(id)sender {
+    region = MKCoordinateRegionMakeWithDistance(currentLocation.location.coordinate, 500, 500);
+    [self.mapView setRegion:region animated:YES];
 }
-
 
 /*
  * Stores user's location and reaction to the database
  */
 - (IBAction)checkButtonClicked:(id)sender {
+    
+    // check if location is null;
+    if (currentLocation == nil) {
+        // handle this properly
+        return;
+    }
+    
     // latitude and longtitude
     NSNumber *latitude = [NSNumber numberWithDouble: currentLocation.location.coordinate.latitude];
     NSNumber *longtitude = [NSNumber numberWithDouble: currentLocation.location.coordinate.longitude];
-    
-    if (latitude == 0 && longtitude == 0) {
-        // error
-        return;
-    }
     
     // location should be saved into the database
     NSLog(@"%@", latitude);
@@ -97,14 +100,15 @@
     
     // query to see if the location has been stored
     PFQuery *query = [PFQuery queryWithClassName:@"PopcornVisits"];
-    [query whereKey:@"latitude" equalTo:latitude];
-    [query whereKey:@"longtitude" equalTo:longtitude];
+    //    [query whereKey:@"latitude" equalTo:latitude];
+    //    [query whereKey:@"longtitude" equalTo:longtitude];
+    [query whereKey:@"address" equalTo:address];
     
     // fire the request to the our back end
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             // The find succeeded.
-            NSLog(@"Successfully retrieved %d scores.", objects.count);
+            NSLog(@"Successfully retrieved %lu scores.", (unsigned long)objects.count);
             if (objects.count == 0) {
                 // no previous entry is in the database.
                 // save data to database
@@ -116,6 +120,9 @@
                 [visit saveInBackground];
             } else {
                 // do nothing
+                for (PFObject *object in objects) {
+                    NSLog(@"%@", object.objectId);
+                }
             }
             // Do something with the found objects
             //            for (PFObject *object in objects) {
@@ -141,7 +148,7 @@
     // For future application, please use official api key
     NSString *urlString = [NSString stringWithFormat: @"https://maps.googleapis.com/maps/api/geocode/json?latlng=%f,%f&sensor=true", pdblLatitude, pdblLongitude];
     NSString *locationString = [NSString stringWithContentsOfURL:[NSURL URLWithString:urlString] encoding:NSASCIIStringEncoding error:&error];
-
+    
     // parse jason object
     NSData *data = [locationString dataUsingEncoding:NSUTF8StringEncoding];
     NSDictionary* json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
@@ -150,7 +157,7 @@
     } else {
         address = [[json objectForKey:@"results"] valueForKey:@"formatted_address"][0];
     }
-
+    
     return address;
 }
 
@@ -172,7 +179,7 @@
     // store the user location
     currentLocation = userLocation;
     
-    region = MKCoordinateRegionMakeWithDistance(userLocation.location.coordinate, 10000, 10000);
+    region = MKCoordinateRegionMakeWithDistance(userLocation.location.coordinate, 500, 500);
     [mapView setRegion:region animated:NO];
     
     // remove us as delegate so we don't re-center map each time user moves

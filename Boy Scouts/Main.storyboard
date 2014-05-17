@@ -175,9 +175,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Popcorn Locations" id="yei-XH-yAE">
-                        <barButtonItem key="rightBarButtonItem" image="UIButtonBarRefresh.png" id="Av2-uM-1qC">
+                        <barButtonItem key="rightBarButtonItem" image="center_direction-25.png" id="Av2-uM-1qC">
                             <connections>
-                                <action selector="refreshButtonClicked:" destination="OnZ-eO-0lA" id="xRS-nm-NbD"/>
+                                <action selector="locateButtonClicked:" destination="OnZ-eO-0lA" id="7fN-om-xK4"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -265,7 +265,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="UIButtonBarRefresh.png" width="18" height="22"/>
+        <image name="center_direction-25.png" width="25" height="25"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

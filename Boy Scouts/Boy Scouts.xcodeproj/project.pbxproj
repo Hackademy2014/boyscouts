@@ -34,6 +34,7 @@
 		D6821BF91926F63E00C079A7 /* NHSCPlaceAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = D6821BF81926F63E00C079A7 /* NHSCPlaceAnnotation.m */; };
 		D6821C011927036D00C079A7 /* UIButtonBarRefresh.png in Resources */ = {isa = PBXBuildFile; fileRef = D6821BFF1927036D00C079A7 /* UIButtonBarRefresh.png */; };
 		D6821C021927036D00C079A7 /* UIButtonBarRefresh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6821C001927036D00C079A7 /* UIButtonBarRefresh@2x.png */; };
+		D68E31881927D13A0093250A /* center_direction-25.png in Resources */ = {isa = PBXBuildFile; fileRef = D68E31871927D13A0093250A /* center_direction-25.png */; };
 		D691187A1926418F00925BB0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D69118791926418F00925BB0 /* Foundation.framework */; };
 		D691187C1926418F00925BB0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D691187B1926418F00925BB0 /* CoreGraphics.framework */; };
 		D691187E1926418F00925BB0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D691187D1926418F00925BB0 /* UIKit.framework */; };
@@ -98,6 +99,8 @@
 		D6821BF81926F63E00C079A7 /* NHSCPlaceAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NHSCPlaceAnnotation.m; sourceTree = "<group>"; };
 		D6821BFF1927036D00C079A7 /* UIButtonBarRefresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UIButtonBarRefresh.png; sourceTree = "<group>"; };
 		D6821C001927036D00C079A7 /* UIButtonBarRefresh@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UIButtonBarRefresh@2x.png"; sourceTree = "<group>"; };
+		D68E31841927CD4C0093250A /* TestLocation.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TestLocation.gpx; sourceTree = "<group>"; };
+		D68E31871927D13A0093250A /* center_direction-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "center_direction-25.png"; sourceTree = "<group>"; };
 		D69118761926418F00925BB0 /* Boy Scouts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Boy Scouts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D69118791926418F00925BB0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D691187B1926418F00925BB0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -185,6 +188,7 @@
 		D691186D1926418F00925BB0 = {
 			isa = PBXGroup;
 			children = (
+				D68E31841927CD4C0093250A /* TestLocation.gpx */,
 				D6821BFA1926F64700C079A7 /* Model */,
 				D6821BF41926F4CE00C079A7 /* NHSCMapLocationViewController.h */,
 				D6821BF51926F4CE00C079A7 /* NHSCMapLocationViewController.m */,
@@ -246,6 +250,7 @@
 		D69118801926418F00925BB0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D68E31871927D13A0093250A /* center_direction-25.png */,
 				D6821BFF1927036D00C079A7 /* UIButtonBarRefresh.png */,
 				D6821C001927036D00C079A7 /* UIButtonBarRefresh@2x.png */,
 				D6821BDC1926839D00C079A7 /* simpleMenuButton.png */,
@@ -366,6 +371,7 @@
 				D6821C021927036D00C079A7 /* UIButtonBarRefresh@2x.png in Resources */,
 				D6821BDE1926839D00C079A7 /* simpleMenuButton.png in Resources */,
 				D691188C1926418F00925BB0 /* Images.xcassets in Resources */,
+				D68E31881927D13A0093250A /* center_direction-25.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
