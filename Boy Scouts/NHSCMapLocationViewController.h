@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import <Parse/Parse.h>
 
 @interface NHSCMapLocationViewController : UIViewController <MKMapViewDelegate> {
     
@@ -20,6 +21,7 @@
 
 @property (nonatomic) MKCoordinateRegion region;
 @property (nonatomic, strong) NSArray *places;
+@property (nonatomic, strong) MKUserLocation *currentLocation;
 
 - (IBAction)refreshButtonClicked:(id)sender;
 - (IBAction)checkButtonClicked:(id)sender;
