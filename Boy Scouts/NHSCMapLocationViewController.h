@@ -11,16 +11,12 @@
 #import <Parse/Parse.h>
 
 @interface NHSCMapLocationViewController : UIViewController <MKMapViewDelegate> {
-    
     MKCoordinateRegion region;
-    NSArray *places;
 }
 
-@property (weak, nonatomic) IBOutlet MKMapView *mapView;
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *refreshButton;
+@property (strong, nonatomic) IBOutlet MKMapView *mapView;
 
 @property (nonatomic) MKCoordinateRegion region;
-@property (nonatomic, strong) NSArray *places;
 @property (nonatomic, strong) MKUserLocation *currentLocation;
 
 - (IBAction)locateButtonClicked:(id)sender;

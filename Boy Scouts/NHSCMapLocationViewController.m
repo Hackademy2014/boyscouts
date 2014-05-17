@@ -15,11 +15,8 @@
 
 @implementation NHSCMapLocationViewController
 
-@synthesize refreshButton;
 @synthesize region;
-@synthesize places;
 @synthesize currentLocation;
-
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
