@@ -88,7 +88,7 @@
     [mapView setRegion:region animated:YES];
     
     // remove us as delegate so we don't re-center map each time user moves
-    mapView.delegate = nil;
+    //mapView.delegate = nil;
 }
 
 /*
