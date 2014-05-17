@@ -101,6 +101,7 @@
 		D6821C001927036D00C079A7 /* UIButtonBarRefresh@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UIButtonBarRefresh@2x.png"; sourceTree = "<group>"; };
 		D68E31841927CD4C0093250A /* TestLocation.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TestLocation.gpx; sourceTree = "<group>"; };
 		D68E31871927D13A0093250A /* center_direction-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "center_direction-25.png"; sourceTree = "<group>"; };
+		D68E31891927D4DB0093250A /* TestLocation2.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TestLocation2.gpx; sourceTree = "<group>"; };
 		D69118761926418F00925BB0 /* Boy Scouts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Boy Scouts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D69118791926418F00925BB0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D691187B1926418F00925BB0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -188,6 +189,7 @@
 		D691186D1926418F00925BB0 = {
 			isa = PBXGroup;
 			children = (
+				D68E31891927D4DB0093250A /* TestLocation2.gpx */,
 				D68E31841927CD4C0093250A /* TestLocation.gpx */,
 				D6821BFA1926F64700C079A7 /* Model */,
 				D6821BF41926F4CE00C079A7 /* NHSCMapLocationViewController.h */,

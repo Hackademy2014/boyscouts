@@ -162,8 +162,58 @@
 }
 
 - (IBAction)noPopcornButtonClicked:(id)sender {
-    // location should be saved into the database
-    NSLog(@"Check button clicked");
+    
+    // check if location is null;
+    if (currentLocation == nil) {
+        // handle this properly
+        return;
+    }
+    
+    // latitude and longtitude
+    NSNumber *latitude = [NSNumber numberWithDouble: currentLocation.location.coordinate.latitude];
+    NSNumber *longtitude = [NSNumber numberWithDouble: currentLocation.location.coordinate.longitude];
+    
+    // get the formatted address from Google
+    NSString *address = [self getAddressFromLatLon:currentLocation.location.coordinate.latitude withLongitude:currentLocation.location.coordinate.longitude];
+    
+    // query to see if the location has been stored
+    PFQuery *query = [PFQuery queryWithClassName:@"PopcornVisits"];
+    //    [query whereKey:@"latitude" equalTo:latitude];
+    //    [query whereKey:@"longtitude" equalTo:longtitude];
+    [query whereKey:@"address" equalTo:address];
+    
+    // fire the request to the our back end
+    [query findObjectsInBackgroundWithBlock:^(NSArray *visits, NSError *error) {
+        if (!error) {
+            // The find succeeded.
+            NSLog(@"Successfully retrieved %lu scores.", (unsigned long)visits.count);
+            if (visits.count == 0) {
+                // no previous entry is in the database.
+                // save data to database
+                PFObject *visit = [PFObject objectWithClassName:@"PopcornVisits"];
+                visit[@"latitude"] = latitude;
+                visit[@"longitude"] = longtitude;
+                visit[@"reaction"] = @NO;
+                visit[@"address"] = address;
+                [visit saveInBackground];
+            } else if (visits.count == 1) {
+                // update the reactino if necessary
+                for (PFObject *visit in visits) {
+                    if ([visit[@"reaction"]  isEqual: @YES]) {
+                        visit[@"reaction"] = @NO;
+                        [visit saveInBackground];
+                    }
+                }
+            }
+            // Do something with the found objects
+            //            for (PFObject *object in objects) {
+            //                NSLog(@"%@", object.objectId);
+            //            }
+        } else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning
