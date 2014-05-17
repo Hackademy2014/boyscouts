@@ -84,17 +84,24 @@
     NSNumber *latitude = [NSNumber numberWithDouble: currentLocation.location.coordinate.latitude];
     NSNumber *longtitude = [NSNumber numberWithDouble: currentLocation.location.coordinate.longitude];
     
+    if (latitude == 0 && longtitude == 0) {
+        // error
+        return;
+    }
+    
     // location should be saved into the database
     NSLog(@"%@", latitude);
     NSLog(@"%@", longtitude);
     
-    //    NSString *address = [self getAddressFromLatLon:currentLocation.location.coordinate.latitude withLongitude:currentLocation.location.coordinate.longitude];
-    //    NSLog(@"%@", address);
+    // get the formatted address from Google
+    NSString *address = [self getAddressFromLatLon:currentLocation.location.coordinate.latitude withLongitude:currentLocation.location.coordinate.longitude];
     
     // query to see if the location has been stored
     PFQuery *query = [PFQuery queryWithClassName:@"PopcornVisits"];
     [query whereKey:@"latitude" equalTo:latitude];
     [query whereKey:@"longtitude" equalTo:longtitude];
+    
+    // fire the request to the our back end
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             // The find succeeded.
@@ -106,6 +113,7 @@
                 visit[@"latitude"] = latitude;
                 visit[@"longitude"] = longtitude;
                 visit[@"reaction"] = @YES;
+                visit[@"address"] = address;
                 [visit saveInBackground];
             } else {
                 // do nothing
@@ -119,23 +127,40 @@
             NSLog(@"Error: %@ %@", error, [error userInfo]);
         }
     }];
-    
-    
 }
 
 /*
  * get the address from location
  */
-//-(NSString *)getAddressFromLatLon:(double)pdblLatitude withLongitude:(double)pdblLongitude
-//{
-//    NSString *urlString = [NSString stringWithFormat: @"https://maps.googleapis.com/maps/api/geocode/json?latlng=%f,%f&sensor=false&location_type=ROOFTOP&result_type=street_address&key=AIzaSyBKYuW9J2M9tAh2ZdxrYkz2N9UY-mSe4gI", pdblLatitude, pdblLongitude];
-//    NSError* error;
-//    NSString *locationString = [NSString stringWithContentsOfURL:[NSURL URLWithString:urlString] encoding:NSASCIIStringEncoding error:&error];
-//    NSLog(@"%@",locationString);
-//
-//    locationString = [locationString stringByReplacingOccurrencesOfString:@"\"" withString:@""];
-//    return [locationString substringFromIndex:6];
-//}
+-(NSString *)getAddressFromLatLon:(double)pdblLatitude withLongitude:(double)pdblLongitude
+{
+    //key arg: &key=AIzaSyBKYuW9J2M9tAh2ZdxrYkz2N9UY-mSe4gI
+    //    NSData *dataUrl = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlString]];
+    //    NSArray *readJsonArray = [NSJSONSerialization JSONObjectWithData:dataUrl options:0 error:0];
+    //    NSDictionary *element1 = readJsonArray[0][0];
+    //    NSString *address = element1[@"formatted_address"];
+    //    NSLog(@"%@", address);
+    //    return address;
+    //    locationString = [locationString stringByReplacingOccurrencesOfString:@"\"" withString:@""];
+    //    locationString = [locationString substringFromIndex:6];
+    NSString *address;
+    NSError* error;
+    
+    // retrieve the name for the location
+    NSString *urlString = [NSString stringWithFormat: @"https://maps.googleapis.com/maps/api/geocode/json?latlng=%f,%f&sensor=true", pdblLatitude, pdblLongitude];
+    NSString *locationString = [NSString stringWithContentsOfURL:[NSURL URLWithString:urlString] encoding:NSASCIIStringEncoding error:&error];
+
+    // parse jason object
+    NSData *data = [locationString dataUsingEncoding:NSUTF8StringEncoding];
+    NSDictionary* json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+    if (error){
+        NSLog(@"Some error %ld", error.code);
+    } else {
+        address = [[json objectForKey:@"results"] valueForKey:@"formatted_address"][0];
+    }
+
+    return address;
+}
 
 - (IBAction)noPopcornButtonClicked:(id)sender {
     // location should be saved into the database
