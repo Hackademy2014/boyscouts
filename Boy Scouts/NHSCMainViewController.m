@@ -36,6 +36,9 @@
         case 1:
             identifier = @"foodDonation";
             break;
+        case 2:
+            identifier = @"News";
+            break;
     }
     
     return identifier;
