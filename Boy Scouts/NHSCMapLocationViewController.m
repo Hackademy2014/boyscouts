@@ -88,7 +88,7 @@
     NSLog(@"%@", latitude);
     NSLog(@"%@", longtitude);
     
-    //NSString *address = [self getAddressFromLatLon:currentLocation.location.coordinate.latitude withLongitude:currentLocation.location.coordinate.longitude];
+    //    NSString *address = [self getAddressFromLatLon:currentLocation.location.coordinate.latitude withLongitude:currentLocation.location.coordinate.longitude];
     //    NSLog(@"%@", address);
     
     // query to see if the location has been stored
@@ -126,16 +126,16 @@
 /*
  * get the address from location
  */
--(NSString *)getAddressFromLatLon:(double)pdblLatitude withLongitude:(double)pdblLongitude
-{
-    NSString *urlString = [NSString stringWithFormat:@"http://maps.google.com/maps/geo?q=%f,%f&output=csv",pdblLatitude, pdblLongitude];
-    NSError* error;
-    NSString *locationString = [NSString stringWithContentsOfURL:[NSURL URLWithString:urlString] encoding:NSASCIIStringEncoding error:&error];
-    NSLog(@"%@",locationString);
-
-    locationString = [locationString stringByReplacingOccurrencesOfString:@"\"" withString:@""];
-    return [locationString substringFromIndex:6];
-}
+//-(NSString *)getAddressFromLatLon:(double)pdblLatitude withLongitude:(double)pdblLongitude
+//{
+//    NSString *urlString = [NSString stringWithFormat: @"https://maps.googleapis.com/maps/api/geocode/json?latlng=%f,%f&sensor=false&location_type=ROOFTOP&result_type=street_address&key=AIzaSyBKYuW9J2M9tAh2ZdxrYkz2N9UY-mSe4gI", pdblLatitude, pdblLongitude];
+//    NSError* error;
+//    NSString *locationString = [NSString stringWithContentsOfURL:[NSURL URLWithString:urlString] encoding:NSASCIIStringEncoding error:&error];
+//    NSLog(@"%@",locationString);
+//
+//    locationString = [locationString stringByReplacingOccurrencesOfString:@"\"" withString:@""];
+//    return [locationString substringFromIndex:6];
+//}
 
 - (IBAction)noPopcornButtonClicked:(id)sender {
     // location should be saved into the database
