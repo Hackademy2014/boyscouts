@@ -265,11 +265,98 @@
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="2lT-X8-yVo" id="XIP-8B-y25"/>
+                        <segue destination="qTt-qQ-CbB" kind="push" identifier="showPopcornDetails" id="FGv-NI-ZGM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tbd-Mi-D3w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2037" y="-1727"/>
+        </scene>
+        <!--Popcorn Details View Controller - Popcorn Sale Details-->
+        <scene sceneID="8t9-rN-E0J">
+            <objects>
+                <viewController id="qTt-qQ-CbB" customClass="NHSCPopcornDetailsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="d9A-Mf-kBE"/>
+                        <viewControllerLayoutGuide type="bottom" id="Sqf-uZ-nBd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bjM-Sm-VqG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ecx-VQ-X8f">
+                                <rect key="frame" x="0.0" y="523" width="320" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.1985971607" blue="0.2221794027" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Ljh-2c-OQA"/>
+                                </constraints>
+                                <state key="normal" title="Untrack This Location">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="untrackLocation:" destination="qTt-qQ-CbB" eventType="touchUpInside" id="Eaa-6f-pwx"/>
+                                    <action selector="untrackLocation:" destination="pk8-zD-zxI" eventType="touchUpInside" id="cHx-qQ-0qt"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PfK-rc-vOr">
+                                <rect key="frame" x="20" y="85" width="81" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJ8-2J-oZa">
+                                <rect key="frame" x="20" y="182" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="TopLeft" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G9L-Pk-qYM">
+                                <rect key="frame" x="20" y="114" width="280" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJR-MT-ylJ">
+                                <rect key="frame" x="20" y="211" width="280" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="adfa" translatesAutoresizingMaskIntoConstraints="NO" id="4kC-Ag-bK9">
+                                <rect key="frame" x="20" y="308" width="280" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sale" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="04G-kc-azF">
+                                <rect key="frame" x="20" y="279" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ecx-VQ-X8f" firstAttribute="leading" secondItem="bjM-Sm-VqG" secondAttribute="leading" id="0C5-vg-Zud"/>
+                            <constraint firstAttribute="bottom" secondItem="Ecx-VQ-X8f" secondAttribute="bottom" id="mRI-wy-dDB"/>
+                            <constraint firstAttribute="trailing" secondItem="Ecx-VQ-X8f" secondAttribute="trailing" id="vD2-do-qTo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Popcorn Sale Details" id="vtu-Kl-lFN"/>
+                    <connections>
+                        <outlet property="addressText" destination="G9L-Pk-qYM" id="Jpi-tk-dpS"/>
+                        <outlet property="dateText" destination="aJR-MT-ylJ" id="UHs-vO-Xoz"/>
+                        <outlet property="saleText" destination="4kC-Ag-bK9" id="dNN-Nz-NLr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NaZ-lK-vC9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2565" y="-1727"/>
         </scene>
         <!--Donation Details View Controller - Donation Details-->
         <scene sceneID="2uf-WI-Ldq">
@@ -345,7 +432,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="06N-Ah-T0u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2701" y="-1053"/>
+            <point key="canvasLocation" x="2565" y="-1053"/>
         </scene>
         <!--News Details View Controller - News Detail-->
         <scene sceneID="Clt-R3-abh">
@@ -374,7 +461,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wjK-h7-Wpa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2701" y="-360"/>
+            <point key="canvasLocation" x="2565" y="-360"/>
         </scene>
         <!--News Main Table View Controller - News-->
         <scene sceneID="5xD-lo-To5">

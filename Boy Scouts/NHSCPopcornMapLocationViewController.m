@@ -31,7 +31,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
     // set itself to be the delegate of the map view
     self.mapView.delegate = self;
     
@@ -73,7 +73,7 @@
                 double longitude = [visit[@"longitude"] doubleValue];
                 NSString *title = visit[@"address"];
                 BOOL reaction = [visit[@"reaction"] boolValue];
-            
+                
                 // creates annotation
                 CLLocationCoordinate2D visitCoordinate = CLLocationCoordinate2DMake(latitude, longitude);
                 
@@ -176,9 +176,8 @@
                 }];
                 
                 // add annotation to the map
-//                [self displayAnnotations];
+                //                [self displayAnnotations];
             } else if (visits.count == 1) {
-                NSLog(@"here");
                 // update the reactino if necessary
                 for (PFObject *visit in visits) {
                     if ([visit[@"reaction"]  isEqual: @NO]) {
@@ -186,8 +185,6 @@
                         [visit saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                             if(succeeded) {
                                 [self displayAnnotations];
-                            } else {
-                                NSLog(@"some other error");
                             }
                         }];
                     }
@@ -239,7 +236,7 @@
                 visit[@"longitude"] = longtitude;
                 visit[@"reaction"] = @NO;
                 visit[@"address"] = address;
-//                [visit saveInBackground];
+                //                [visit saveInBackground];
                 
                 [visit saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                     if(succeeded) {
@@ -248,24 +245,19 @@
                 }];
                 
                 // add annotations
-
+                
             } else if (visits.count == 1) {
                 // update the reactino if necessary
-                NSLog(@"No button");
                 for (PFObject *visit in visits) {
                     if ([visit[@"reaction"]  isEqual: @YES]) {
                         visit[@"reaction"] = @NO;
                         [visit saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                             if(succeeded) {
                                 [self displayAnnotations];
-                            } else {
-                                NSLog(@"some error");
                             }
                         }];
                     }
                 }
-//                // update annotations
-//                [self displayAnnotations];
             } else {
                 // multiple instances, should do nothing
             }

@@ -15,6 +15,7 @@
 		D63DB1731928570600A3BA07 /* NHSCDonationDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63DB1721928570600A3BA07 /* NHSCDonationDetailsViewController.m */; };
 		D63DB17619286C5300A3BA07 /* NHSCNewsMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63DB17519286C5300A3BA07 /* NHSCNewsMainTableViewController.m */; };
 		D63DB17919286CA100A3BA07 /* NHSCNewsDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63DB17819286CA100A3BA07 /* NHSCNewsDetailsViewController.m */; };
+		D66B27611928848B0060ED61 /* NHSCPopcornDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D66B27601928848B0060ED61 /* NHSCPopcornDetailsViewController.m */; };
 		D6821BCA19265B5400C079A7 /* AMSlideMenuContentSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D6821BBC19265B5400C079A7 /* AMSlideMenuContentSegue.m */; };
 		D6821BCB19265B5400C079A7 /* AMSlideMenuLeftMenuSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D6821BBE19265B5400C079A7 /* AMSlideMenuLeftMenuSegue.m */; };
 		D6821BCC19265B5400C079A7 /* AMSlideMenuLeftTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6821BC019265B5400C079A7 /* AMSlideMenuLeftTableViewController.m */; };
@@ -84,6 +85,8 @@
 		D63DB17519286C5300A3BA07 /* NHSCNewsMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NHSCNewsMainTableViewController.m; sourceTree = "<group>"; };
 		D63DB17719286CA100A3BA07 /* NHSCNewsDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NHSCNewsDetailsViewController.h; sourceTree = "<group>"; };
 		D63DB17819286CA100A3BA07 /* NHSCNewsDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NHSCNewsDetailsViewController.m; sourceTree = "<group>"; };
+		D66B275F1928848B0060ED61 /* NHSCPopcornDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NHSCPopcornDetailsViewController.h; sourceTree = "<group>"; };
+		D66B27601928848B0060ED61 /* NHSCPopcornDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NHSCPopcornDetailsViewController.m; sourceTree = "<group>"; };
 		D6821BBB19265B5400C079A7 /* AMSlideMenuContentSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSlideMenuContentSegue.h; sourceTree = "<group>"; };
 		D6821BBC19265B5400C079A7 /* AMSlideMenuContentSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMSlideMenuContentSegue.m; sourceTree = "<group>"; };
 		D6821BBD19265B5400C079A7 /* AMSlideMenuLeftMenuSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSlideMenuLeftMenuSegue.h; sourceTree = "<group>"; };
@@ -245,6 +248,8 @@
 		D691186D1926418F00925BB0 = {
 			isa = PBXGroup;
 			children = (
+				D66B275F1928848B0060ED61 /* NHSCPopcornDetailsViewController.h */,
+				D66B27601928848B0060ED61 /* NHSCPopcornDetailsViewController.m */,
 				D63DB1711928570600A3BA07 /* NHSCDonationDetailsViewController.h */,
 				D63DB1721928570600A3BA07 /* NHSCDonationDetailsViewController.m */,
 				D6668B181928715200B3309A /* NewsViews */,
@@ -473,6 +478,7 @@
 				753EF4D319283A4C00733F0D /* NHSCContactUsViewController.m in Sources */,
 				753EF4CE19281A9D00733F0D /* NHSCAboutUsViewController.m in Sources */,
 				D6821BD51926689900C079A7 /* NHSCMainViewController.m in Sources */,
+				D66B27611928848B0060ED61 /* NHSCPopcornDetailsViewController.m in Sources */,
 				D6821BF61926F4CE00C079A7 /* NHSCPopcornMapLocationViewController.m in Sources */,
 				D6821BCA19265B5400C079A7 /* AMSlideMenuContentSegue.m in Sources */,
 				D691188A1926418F00925BB0 /* NHSCAppDelegate.m in Sources */,
