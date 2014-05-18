@@ -13,4 +13,7 @@
 
 @property (strong, nonatomic) NHSCPlaceAnnotation *annotation;
 
+@property (weak, nonatomic) IBOutlet UILabel *addressLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+
 @end
