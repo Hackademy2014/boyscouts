@@ -39,6 +39,12 @@
         case 2:
             identifier = @"News";
             break;
+        case 3:
+            identifier = @"about";
+            break;
+        case 4:
+            identifier = @"contact";
+            break;
     }
     
     return identifier;
