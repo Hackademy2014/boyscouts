@@ -64,8 +64,20 @@ NSString *note;
         // save the note
         annotationObj[@"note"] = noteText.text;
         [annotationObj saveInBackground];
+        
+        // update the parent view before going back
+        parent.note = noteText.text;
+        parent.noteLabel.text = @"Note";
+        parent.saleText.text = noteText.text;
+        
+        [parent.saleText.layer setBorderColor:[[[UIColor grayColor] colorWithAlphaComponent:0.5] CGColor]];
+        [parent.saleText.layer setBorderWidth:2.0];
+        
+        //The rounded corner part, where you specify your view's corner radius:
+        parent.saleText.layer.cornerRadius = 5;
+        parent.saleText.clipsToBounds = YES;
     }
-    // update the parent view before going back
+    
     
     [self dismissViewControllerAnimated:YES completion:nil];
 

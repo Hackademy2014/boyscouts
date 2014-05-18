@@ -21,11 +21,12 @@
 @synthesize dateText;
 @synthesize noteLabel;
 @synthesize saleText;
+@synthesize note;
 
 PFObject *annotationObj;
 NSString *address;
 NSDate *date;
-NSString *note;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
