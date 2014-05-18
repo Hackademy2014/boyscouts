@@ -11,7 +11,7 @@
 
 @interface NHSCDonationDetailsViewController : UIViewController
 
-@property (strong, nonatomic) NHSCPlaceAnnotation *annotation;
+@property (weak, nonatomic) NHSCPlaceAnnotation *annotation;
 
 @property (weak, nonatomic) IBOutlet UILabel *addressLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;

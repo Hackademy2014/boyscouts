@@ -15,6 +15,8 @@
 @implementation NHSCDonationDetailsViewController
 
 @synthesize annotation;
+@synthesize addressLabel;
+@synthesize dateLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,6 +31,13 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self loadAnnotation];
+    
+}
+
+-(void) loadAnnotation {
+    addressLabel.text = annotation.title;
 }
 
 - (void)didReceiveMemoryWarning
