@@ -35,7 +35,7 @@
     self.mapView.delegate = self;
     
     // sets the annotaions
-//    [self displayAnnotations];
+    [self displayAnnotations];
     
     // initialize current location if necessary
     if (!currentLocation) {
@@ -43,6 +43,125 @@
         region = MKCoordinateRegionMakeWithDistance(currentLocation.location.coordinate, 500, 500);
         [self.mapView setRegion:region animated:NO];
     }
+}
+
+/*
+ * Finds the nearby locations that have record for the popcorn
+ */
+- (void)displayAnnotations {
+
+    // remove all annocations
+    [self.mapView removeAnnotations:self.mapView.annotations];
+    
+    // Find locations around from backend
+    PFQuery *query = [PFQuery queryWithClassName:@"FoodDonationVisits"];
+    
+    // locations should be within a range
+    
+    query.limit = 10;
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray *visits, NSError *error) {
+        if (!error) {
+            // populate the visits to the view
+            // The find succeeded.
+            NSLog(@"Successfully retrieved %lu scores.", (unsigned long)visits.count);
+            // Do something with the found objects
+            for (PFObject *visit in visits) {
+                double latitude = [visit[@"latitude"] doubleValue];
+                double longitude = [visit[@"longitude"] doubleValue];
+                NSString *title = visit[@"address"];
+                
+                // creates annotation
+                CLLocationCoordinate2D visitCoordinate = CLLocationCoordinate2DMake(latitude, longitude);
+                
+                NHSCPlaceAnnotation *pin = [[NHSCPlaceAnnotation alloc] init];
+                pin.coordinate = visitCoordinate;
+                pin.title = title;
+                
+                // adds annotation to the map
+                [self.mapView addAnnotation:pin];
+            }
+        } else {
+            // error
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
+    
+}
+
+    
+/*
+ * get the address from location
+ */
+-(NSString *)getAddressFromLatLon:(double)pdblLatitude withLongitude:(double)pdblLongitude
+{
+    NSString *address;
+    NSError* error;
+    
+    // retrieve the name for the location
+    // ****************************** This URL is for the Google Map API *******************************
+    // For future application, please use official api key
+    NSString *urlString = [NSString stringWithFormat: @"https://maps.googleapis.com/maps/api/geocode/json?latlng=%f,%f&sensor=true", pdblLatitude, pdblLongitude];
+    NSString *locationString = [NSString stringWithContentsOfURL:[NSURL URLWithString:urlString] encoding:NSASCIIStringEncoding error:&error];
+    
+    // parse jason object
+    NSData *data = [locationString dataUsingEncoding:NSUTF8StringEncoding];
+    NSDictionary* json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+    if (error){
+        NSLog(@"Some error %ld", error.code);
+    } else {
+        address = [[json objectForKey:@"results"] valueForKey:@"formatted_address"][0];
+    }
+    
+    return address;
+}
+
+
+/*
+ * stores the food pickup location for future pickup
+ */
+- (IBAction)pickButtonClicked:(id)sender {
+    // check if location is null;
+    if (currentLocation == nil) {
+        // handle this properly
+        return;
+    }
+    
+    // latitude and longtitude
+    NSNumber *latitude = [NSNumber numberWithDouble: currentLocation.location.coordinate.latitude];
+    NSNumber *longtitude = [NSNumber numberWithDouble: currentLocation.location.coordinate.longitude];
+    
+    // get the formatted address from Google
+    NSString *address = [self getAddressFromLatLon:currentLocation.location.coordinate.latitude withLongitude:currentLocation.location.coordinate.longitude];
+    
+    // query to see if the location has been stored
+    PFQuery *query = [PFQuery queryWithClassName:@"FoodDonationVisits"];
+    [query whereKey:@"address" equalTo:address];
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray *visits, NSError *error) {
+        if (!error) {
+            // The find succeeded.
+            NSLog(@"Successfully retrieved %lu scores.", (unsigned long)visits.count);
+            if (visits.count == 0) {
+                // no previous entry is in the database.
+                // save new data to database
+                PFObject *visit = [PFObject objectWithClassName:@"FoodDonationVisits"];
+                visit[@"latitude"] = latitude;
+                visit[@"longitude"] = longtitude;
+                visit[@"address"] = address;
+                [visit saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                    if(succeeded) {
+                        //update the view
+                    }
+                }];
+            } else {
+                // do nothing
+            }
+        } else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning
@@ -85,22 +204,20 @@
     
     // set the color of the pin
     annotationView.pinColor = MKPinAnnotationColorPurple;
-
+    
     annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
     return annotationView;
 }
 
 /*
-#pragma mark - Navigation
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+ {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
-- (IBAction)pickButtonClicked:(id)sender {
-}
 @end
