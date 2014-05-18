@@ -134,12 +134,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NHSCDonationMapLocationViewController.m"
-            timestampString = "422074196.334573"
+            timestampString = "422092791.644283"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "205"
-            endingLineNumber = "205"
-            landmarkName = "-mapView:annotationView:calloutAccessoryControlTapped:"
+            startingLineNumber = "226"
+            endingLineNumber = "226"
+            landmarkName = "-prepareForSegue:sender:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NHSCDonationMapLocationViewController.m"
+            timestampString = "422092791.644283"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
+            landmarkName = "-mapView:didUpdateUserLocation:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
