@@ -16,6 +16,7 @@
 
 @implementation NHSCDonationDetailsViewController
 
+@synthesize parent;
 @synthesize annotation;
 @synthesize addressText;
 @synthesize dateText;
@@ -50,6 +51,7 @@ NSDate *dateToPickup;
             if (visits.count == 1) {
                 // Do something with the found objects
                 for (PFObject *visit in visits) {
+                    annotationObj = visit;
                     address = visit[@"address"];
                     dateToPickup = visit.createdAt;
                     
@@ -100,9 +102,6 @@ NSDate *dateToPickup;
     
     NSString *stringFromDate = [formatter stringFromDate:dateToPickup];
     dateText.text = stringFromDate;
-    
-#warning adds the date to pick up here
-    
 }
 
 
@@ -110,7 +109,24 @@ NSDate *dateToPickup;
  * untrack this location by removing it from the database
  */
 - (IBAction)untrackLocation:(id)sender {
+    [annotationObj deleteInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            // go back to the map view
+            [parent displayAnnotations];
+            [self.navigationController popViewControllerAnimated:YES];
+        }
+    }];
+}
+
+/*
+ * this function is executed when user clicks the back button
+ */
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
     
+    if (self.isMovingFromParentViewController || self.isBeingDismissed) {
+        NSLog(@"%@", self.parentViewController);
+    }
 }
 
 - (void)didReceiveMemoryWarning

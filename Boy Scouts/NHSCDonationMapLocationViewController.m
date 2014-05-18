@@ -184,7 +184,7 @@
     if (!annotationView)
     {
         annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
-        annotationView.animatesDrop = NO;
+        annotationView.animatesDrop = YES;
         annotationView.canShowCallout = YES;
     }else {
         annotationView.annotation = annotation;
@@ -223,6 +223,8 @@
         
         // Pass the selected object to the new view controller.
         dest.annotation = pin;
+        dest.parent = self;
+        
     }
 }
 

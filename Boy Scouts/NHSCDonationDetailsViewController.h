@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "NHSCPlaceAnnotation.h"
+#import "NHSCDonationMapLocationViewController.h"
 
 @interface NHSCDonationDetailsViewController : UIViewController
 
 @property (weak, nonatomic) NHSCPlaceAnnotation *annotation;
+@property (weak) NHSCDonationMapLocationViewController *parent;
 
 @property (weak, nonatomic) IBOutlet UITextView *addressText;
 @property (weak, nonatomic) IBOutlet UITextView *dateText;

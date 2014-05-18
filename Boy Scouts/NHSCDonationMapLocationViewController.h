@@ -20,6 +20,7 @@
 
 - (IBAction)pickButtonClicked:(id)sender;
 - (IBAction)locateButtonClicked:(id)sender;
+- (void)displayAnnotations;
 
 
 @end
