@@ -187,10 +187,10 @@
             </objects>
             <point key="canvasLocation" x="2037" y="-1053"/>
         </scene>
-        <!--Map Location View Controller - Popcorn Locations-->
+        <!--Popcorn Map Location View Controller - Popcorn Locations-->
         <scene sceneID="naE-Nf-ZLV">
             <objects>
-                <viewController id="OnZ-eO-0lA" customClass="NHSCMapLocationViewController" sceneMemberID="viewController">
+                <viewController id="OnZ-eO-0lA" customClass="NHSCPopcornMapLocationViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dad-gL-7XN"/>
                         <viewControllerLayoutGuide type="bottom" id="djN-Ch-que"/>

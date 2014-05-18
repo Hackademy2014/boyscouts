@@ -10,7 +10,7 @@
 #import <MapKit/MapKit.h>
 #import <Parse/Parse.h>
 
-@interface NHSCMapLocationViewController : UIViewController <MKMapViewDelegate> {
+@interface NHSCPopcornMapLocationViewController : UIViewController <MKMapViewDelegate> {
     MKCoordinateRegion region;
 }
 

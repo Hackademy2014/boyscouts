@@ -6,14 +6,14 @@
 //  Copyright (c) 2014 Daniel Webster Council Boy Scouts of America. All rights reserved.
 //
 
-#import "NHSCMapLocationViewController.h"
+#import "NHSCPopcornMapLocationViewController.h"
 #import "NHSCPlaceAnnotation.h"
 
-@interface NHSCMapLocationViewController ()
+@interface NHSCPopcornMapLocationViewController ()
 
 @end
 
-@implementation NHSCMapLocationViewController
+@implementation NHSCPopcornMapLocationViewController
 
 @synthesize region;
 @synthesize currentLocation;
