@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		752A1E0D192684A800D211B1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752A1E0C192684A800D211B1 /* MapKit.framework */; };
+		753EF4CE19281A9D00733F0D /* NHSCAboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 753EF4CD19281A9D00733F0D /* NHSCAboutUsViewController.m */; };
+		753EF4D0192838FB00733F0D /* DWCheaderlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 753EF4CF192838FB00733F0D /* DWCheaderlogo.png */; };
+		753EF4D319283A4C00733F0D /* NHSCContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 753EF4D219283A4C00733F0D /* NHSCContactUsViewController.m */; };
 		D6821BCA19265B5400C079A7 /* AMSlideMenuContentSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D6821BBC19265B5400C079A7 /* AMSlideMenuContentSegue.m */; };
 		D6821BCB19265B5400C079A7 /* AMSlideMenuLeftMenuSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D6821BBE19265B5400C079A7 /* AMSlideMenuLeftMenuSegue.m */; };
 		D6821BCC19265B5400C079A7 /* AMSlideMenuLeftTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6821BC019265B5400C079A7 /* AMSlideMenuLeftTableViewController.m */; };
@@ -64,6 +67,11 @@
 
 /* Begin PBXFileReference section */
 		752A1E0C192684A800D211B1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		753EF4CC19281A9D00733F0D /* NHSCAboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NHSCAboutUsViewController.h; sourceTree = "<group>"; };
+		753EF4CD19281A9D00733F0D /* NHSCAboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NHSCAboutUsViewController.m; sourceTree = "<group>"; };
+		753EF4CF192838FB00733F0D /* DWCheaderlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DWCheaderlogo.png; sourceTree = "<group>"; };
+		753EF4D119283A4C00733F0D /* NHSCContactUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NHSCContactUsViewController.h; sourceTree = "<group>"; };
+		753EF4D219283A4C00733F0D /* NHSCContactUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NHSCContactUsViewController.m; sourceTree = "<group>"; };
 		D6821BBB19265B5400C079A7 /* AMSlideMenuContentSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSlideMenuContentSegue.h; sourceTree = "<group>"; };
 		D6821BBC19265B5400C079A7 /* AMSlideMenuContentSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMSlideMenuContentSegue.m; sourceTree = "<group>"; };
 		D6821BBD19265B5400C079A7 /* AMSlideMenuLeftMenuSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSlideMenuLeftMenuSegue.h; sourceTree = "<group>"; };
@@ -208,6 +216,10 @@
 				D6821BD31926689900C079A7 /* NHSCMainViewController.h */,
 				D6821BD41926689900C079A7 /* NHSCMainViewController.m */,
 				D6821BD119265B6400C079A7 /* Main.storyboard */,
+				753EF4D119283A4C00733F0D /* NHSCContactUsViewController.h */,
+				753EF4D219283A4C00733F0D /* NHSCContactUsViewController.m */,
+				753EF4CC19281A9D00733F0D /* NHSCAboutUsViewController.h */,
+				753EF4CD19281A9D00733F0D /* NHSCAboutUsViewController.m */,
 				D6821BBA19265B5400C079A7 /* AMSlideMenu */,
 				D691187F1926418F00925BB0 /* Boy Scouts */,
 				D69118981926418F00925BB0 /* Boy ScoutsTests */,
@@ -261,6 +273,7 @@
 		D69118801926418F00925BB0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				753EF4CF192838FB00733F0D /* DWCheaderlogo.png */,
 				D68E3190192813DF0093250A /* delete_sign-25.png */,
 				D68E318E192813440093250A /* checkmark-25.png */,
 				D68E31871927D13A0093250A /* center_direction-25.png */,
@@ -379,6 +392,7 @@
 			files = (
 				D68E3191192813DF0093250A /* delete_sign-25.png in Resources */,
 				D6821BD219265B6400C079A7 /* Main.storyboard in Resources */,
+				753EF4D0192838FB00733F0D /* DWCheaderlogo.png in Resources */,
 				D68E318F192813440093250A /* checkmark-25.png in Resources */,
 				D6821C011927036D00C079A7 /* UIButtonBarRefresh.png in Resources */,
 				D69118841926418F00925BB0 /* InfoPlist.strings in Resources */,
@@ -410,6 +424,8 @@
 				D6821BCF19265B5400C079A7 /* AMSlideMenuRightTableViewController.m in Sources */,
 				D6821BF91926F63E00C079A7 /* NHSCPlaceAnnotation.m in Sources */,
 				D6821BCE19265B5400C079A7 /* AMSlideMenuRightMenuSegue.m in Sources */,
+				753EF4D319283A4C00733F0D /* NHSCContactUsViewController.m in Sources */,
+				753EF4CE19281A9D00733F0D /* NHSCAboutUsViewController.m in Sources */,
 				D6821BD51926689900C079A7 /* NHSCMainViewController.m in Sources */,
 				D6821BF61926F4CE00C079A7 /* NHSCMapLocationViewController.m in Sources */,
 				D6821BCA19265B5400C079A7 /* AMSlideMenuContentSegue.m in Sources */,
