@@ -11,6 +11,8 @@
 		753EF4CE19281A9D00733F0D /* NHSCAboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 753EF4CD19281A9D00733F0D /* NHSCAboutUsViewController.m */; };
 		753EF4D0192838FB00733F0D /* DWCheaderlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 753EF4CF192838FB00733F0D /* DWCheaderlogo.png */; };
 		753EF4D319283A4C00733F0D /* NHSCContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 753EF4D219283A4C00733F0D /* NHSCContactUsViewController.m */; };
+		758C34FA1928F7AD003E9E43 /* 200px-Boy_Scouts_of_America_corporate_trademark.svg.png in Resources */ = {isa = PBXBuildFile; fileRef = 758C34F91928F7AD003E9E43 /* 200px-Boy_Scouts_of_America_corporate_trademark.svg.png */; };
+		758C34FE1928FC39003E9E43 /* Base.png in Resources */ = {isa = PBXBuildFile; fileRef = 758C34FD1928FC39003E9E43 /* Base.png */; };
 		D63DB16E19284EDA00A3BA07 /* NHSCAddressHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D63DB16D19284EDA00A3BA07 /* NHSCAddressHelper.m */; };
 		D63DB1731928570600A3BA07 /* NHSCDonationDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63DB1721928570600A3BA07 /* NHSCDonationDetailsViewController.m */; };
 		D63DB17619286C5300A3BA07 /* NHSCNewsMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63DB17519286C5300A3BA07 /* NHSCNewsMainTableViewController.m */; };
@@ -86,6 +88,8 @@
 		753EF4CF192838FB00733F0D /* DWCheaderlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DWCheaderlogo.png; sourceTree = "<group>"; };
 		753EF4D119283A4C00733F0D /* NHSCContactUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NHSCContactUsViewController.h; sourceTree = "<group>"; };
 		753EF4D219283A4C00733F0D /* NHSCContactUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NHSCContactUsViewController.m; sourceTree = "<group>"; };
+		758C34F91928F7AD003E9E43 /* 200px-Boy_Scouts_of_America_corporate_trademark.svg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "200px-Boy_Scouts_of_America_corporate_trademark.svg.png"; sourceTree = "<group>"; };
+		758C34FD1928FC39003E9E43 /* Base.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Base.png; sourceTree = "<group>"; };
 		D63DB16C19284EDA00A3BA07 /* NHSCAddressHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NHSCAddressHelper.h; sourceTree = "<group>"; };
 		D63DB16D19284EDA00A3BA07 /* NHSCAddressHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NHSCAddressHelper.m; sourceTree = "<group>"; };
 		D63DB1711928570600A3BA07 /* NHSCDonationDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NHSCDonationDetailsViewController.h; sourceTree = "<group>"; };
@@ -346,6 +350,8 @@
 		D69118801926418F00925BB0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				758C34FD1928FC39003E9E43 /* Base.png */,
+				758C34F91928F7AD003E9E43 /* 200px-Boy_Scouts_of_America_corporate_trademark.svg.png */,
 				D665FD55192899AB00AEB3A5 /* DWCBS.png */,
 				D665FD51192897D900AEB3A5 /* globe-25.png */,
 				D665FD471928964900AEB3A5 /* email.png */,
@@ -436,6 +442,7 @@
 				ORGANIZATIONNAME = "Daniel Webster Council Boy Scouts of America";
 				TargetAttributes = {
 					D69118751926418F00925BB0 = {
+						DevelopmentTeam = 5MZDR8X5N4;
 						SystemCapabilities = {
 							com.apple.iOS = {
 								enabled = 1;
@@ -472,8 +479,10 @@
 			files = (
 				D68E3191192813DF0093250A /* delete_sign-25.png in Resources */,
 				D6821BD219265B6400C079A7 /* Main.storyboard in Resources */,
+				758C34FE1928FC39003E9E43 /* Base.png in Resources */,
 				753EF4D0192838FB00733F0D /* DWCheaderlogo.png in Resources */,
 				D665FD56192899AB00AEB3A5 /* DWCBS.png in Resources */,
+				758C34FA1928F7AD003E9E43 /* 200px-Boy_Scouts_of_America_corporate_trademark.svg.png in Resources */,
 				D68E318F192813440093250A /* checkmark-25.png in Resources */,
 				D6821C011927036D00C079A7 /* UIButtonBarRefresh.png in Resources */,
 				D69118841926418F00925BB0 /* InfoPlist.strings in Resources */,
@@ -645,6 +654,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -653,6 +664,7 @@
 				GCC_PREFIX_HEADER = "Boy Scouts/Boy Scouts-Prefix.pch";
 				INFOPLIST_FILE = "Boy Scouts/Boy Scouts-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -663,6 +675,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -671,6 +685,7 @@
 				GCC_PREFIX_HEADER = "Boy Scouts/Boy Scouts-Prefix.pch";
 				INFOPLIST_FILE = "Boy Scouts/Boy Scouts-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
