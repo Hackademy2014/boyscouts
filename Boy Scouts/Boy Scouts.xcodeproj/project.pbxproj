@@ -172,6 +172,7 @@
 		D6B1AC291928E5BB000EF655 /* NHSCPopcornNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NHSCPopcornNoteViewController.m; sourceTree = "<group>"; };
 		D6B1AC2B1928F6EC000EF655 /* NHSCDonationNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NHSCDonationNoteViewController.h; sourceTree = "<group>"; };
 		D6B1AC2C1928F6EC000EF655 /* NHSCDonationNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NHSCDonationNoteViewController.m; sourceTree = "<group>"; };
+		D6B1AC2E1928FF80000EF655 /* TestLocation3.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TestLocation3.gpx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +222,7 @@
 		D63DB1701928500B00A3BA07 /* TestLocations */ = {
 			isa = PBXGroup;
 			children = (
+				D6B1AC2E1928FF80000EF655 /* TestLocation3.gpx */,
 				D68E31891927D4DB0093250A /* TestLocation2.gpx */,
 				D68E31841927CD4C0093250A /* TestLocation.gpx */,
 			);
