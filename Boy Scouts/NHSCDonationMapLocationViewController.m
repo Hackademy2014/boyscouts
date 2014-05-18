@@ -8,6 +8,7 @@
 
 #import "NHSCDonationMapLocationViewController.h"
 #import "NHSCPlaceAnnotation.h"
+#import "NHSCAddressHelper.h"
 
 @interface NHSCDonationMapLocationViewController ()
 
@@ -89,33 +90,6 @@
     
 }
 
-
-/*
- * get the address from location
- */
--(NSString *)getAddressFromLatLon:(double)pdblLatitude withLongitude:(double)pdblLongitude
-{
-    NSString *address;
-    NSError* error;
-    
-    // retrieve the name for the location
-    // ****************************** This URL is for the Google Map API *******************************
-    // For future application, please use official api key
-    NSString *urlString = [NSString stringWithFormat: @"https://maps.googleapis.com/maps/api/geocode/json?latlng=%f,%f&sensor=true", pdblLatitude, pdblLongitude];
-    NSString *locationString = [NSString stringWithContentsOfURL:[NSURL URLWithString:urlString] encoding:NSASCIIStringEncoding error:&error];
-    
-    // parse jason object
-    NSData *data = [locationString dataUsingEncoding:NSUTF8StringEncoding];
-    NSDictionary* json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
-    if (error){
-        NSLog(@"Some error %ld", error.code);
-    } else {
-        address = [[json objectForKey:@"results"] valueForKey:@"formatted_address"][0];
-    }
-    
-    return address;
-}
-
 // center the user's current location in the map view
 - (IBAction)locateButtonClicked:(id)sender {
     region = MKCoordinateRegionMakeWithDistance(currentLocation.location.coordinate, 500, 500);
@@ -137,7 +111,7 @@
     NSNumber *longtitude = [NSNumber numberWithDouble: currentLocation.location.coordinate.longitude];
     
     // get the formatted address from Google
-    NSString *address = [self getAddressFromLatLon:currentLocation.location.coordinate.latitude withLongitude:currentLocation.location.coordinate.longitude];
+    NSString *address = [NHSCAddressHelper getAddressFromLatLon:currentLocation.location.coordinate.latitude withLongitude:currentLocation.location.coordinate.longitude];
     
     // query to see if the location has been stored
     PFQuery *query = [PFQuery queryWithClassName:@"FoodDonationVisits"];

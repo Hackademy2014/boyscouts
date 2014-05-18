@@ -11,6 +11,7 @@
 		753EF4CE19281A9D00733F0D /* NHSCAboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 753EF4CD19281A9D00733F0D /* NHSCAboutUsViewController.m */; };
 		753EF4D0192838FB00733F0D /* DWCheaderlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 753EF4CF192838FB00733F0D /* DWCheaderlogo.png */; };
 		753EF4D319283A4C00733F0D /* NHSCContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 753EF4D219283A4C00733F0D /* NHSCContactUsViewController.m */; };
+		D63DB16E19284EDA00A3BA07 /* NHSCAddressHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D63DB16D19284EDA00A3BA07 /* NHSCAddressHelper.m */; };
 		D6821BCA19265B5400C079A7 /* AMSlideMenuContentSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D6821BBC19265B5400C079A7 /* AMSlideMenuContentSegue.m */; };
 		D6821BCB19265B5400C079A7 /* AMSlideMenuLeftMenuSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D6821BBE19265B5400C079A7 /* AMSlideMenuLeftMenuSegue.m */; };
 		D6821BCC19265B5400C079A7 /* AMSlideMenuLeftTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6821BC019265B5400C079A7 /* AMSlideMenuLeftTableViewController.m */; };
@@ -72,6 +73,8 @@
 		753EF4CF192838FB00733F0D /* DWCheaderlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DWCheaderlogo.png; sourceTree = "<group>"; };
 		753EF4D119283A4C00733F0D /* NHSCContactUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NHSCContactUsViewController.h; sourceTree = "<group>"; };
 		753EF4D219283A4C00733F0D /* NHSCContactUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NHSCContactUsViewController.m; sourceTree = "<group>"; };
+		D63DB16C19284EDA00A3BA07 /* NHSCAddressHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NHSCAddressHelper.h; sourceTree = "<group>"; };
+		D63DB16D19284EDA00A3BA07 /* NHSCAddressHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NHSCAddressHelper.m; sourceTree = "<group>"; };
 		D6821BBB19265B5400C079A7 /* AMSlideMenuContentSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSlideMenuContentSegue.h; sourceTree = "<group>"; };
 		D6821BBC19265B5400C079A7 /* AMSlideMenuContentSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMSlideMenuContentSegue.m; sourceTree = "<group>"; };
 		D6821BBD19265B5400C079A7 /* AMSlideMenuLeftMenuSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSlideMenuLeftMenuSegue.h; sourceTree = "<group>"; };
@@ -170,6 +173,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D63DB16F19284FEE00A3BA07 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D63DB16C19284EDA00A3BA07 /* NHSCAddressHelper.h */,
+				D63DB16D19284EDA00A3BA07 /* NHSCAddressHelper.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		D63DB1701928500B00A3BA07 /* TestLocations */ = {
+			isa = PBXGroup;
+			children = (
+				D68E31891927D4DB0093250A /* TestLocation2.gpx */,
+				D68E31841927CD4C0093250A /* TestLocation.gpx */,
+			);
+			name = TestLocations;
+			sourceTree = "<group>";
+		};
 		D6821BBA19265B5400C079A7 /* AMSlideMenu */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,21 +213,21 @@
 			path = AMSlideMenu;
 			sourceTree = "<group>";
 		};
-		D6821BFA1926F64700C079A7 /* Model */ = {
+		D6821BFA1926F64700C079A7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				D6821BF71926F63E00C079A7 /* NHSCPlaceAnnotation.h */,
 				D6821BF81926F63E00C079A7 /* NHSCPlaceAnnotation.m */,
 			);
-			name = Model;
+			name = Models;
 			sourceTree = "<group>";
 		};
 		D691186D1926418F00925BB0 = {
 			isa = PBXGroup;
 			children = (
-				D68E31891927D4DB0093250A /* TestLocation2.gpx */,
-				D68E31841927CD4C0093250A /* TestLocation.gpx */,
-				D6821BFA1926F64700C079A7 /* Model */,
+				D63DB1701928500B00A3BA07 /* TestLocations */,
+				D63DB16F19284FEE00A3BA07 /* Helpers */,
+				D6821BFA1926F64700C079A7 /* Models */,
 				D6821BF41926F4CE00C079A7 /* NHSCPopcornMapLocationViewController.h */,
 				D6821BF51926F4CE00C079A7 /* NHSCPopcornMapLocationViewController.m */,
 				D68E31921928170B0093250A /* NHSCDonationMapLocationViewController.h */,
@@ -433,6 +454,7 @@
 				D6821BCB19265B5400C079A7 /* AMSlideMenuLeftMenuSegue.m in Sources */,
 				D6821BD019265B5400C079A7 /* UIViewController+AMSlideMenu.m in Sources */,
 				D6821BDB19266B1B00C079A7 /* NHSCLeftMenuTableViewController.m in Sources */,
+				D63DB16E19284EDA00A3BA07 /* NHSCAddressHelper.m in Sources */,
 				D6821BCD19265B5400C079A7 /* AMSlideMenuMainViewController.m in Sources */,
 				D69118861926418F00925BB0 /* main.m in Sources */,
 			);
