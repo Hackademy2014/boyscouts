@@ -326,7 +326,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="adfa" translatesAutoresizingMaskIntoConstraints="NO" id="4kC-Ag-bK9">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kC-Ag-bK9">
                                 <rect key="frame" x="20" y="308" width="280" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -351,6 +351,7 @@
                     <connections>
                         <outlet property="addressText" destination="G9L-Pk-qYM" id="Jpi-tk-dpS"/>
                         <outlet property="dateText" destination="aJR-MT-ylJ" id="UHs-vO-Xoz"/>
+                        <outlet property="noteLabel" destination="04G-kc-azF" id="shM-3x-M6v"/>
                         <outlet property="saleText" destination="4kC-Ag-bK9" id="dNN-Nz-NLr"/>
                     </connections>
                 </viewController>

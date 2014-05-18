@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *addressText;
 @property (weak, nonatomic) IBOutlet UITextView *dateText;
 @property (weak, nonatomic) IBOutlet UITextView *saleText;
+@property (weak, nonatomic) IBOutlet UILabel *noteLabel;
 
 - (IBAction)untrackLocation:(id)sender;
 @end

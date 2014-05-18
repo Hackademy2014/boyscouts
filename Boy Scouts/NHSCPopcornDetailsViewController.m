@@ -18,12 +18,13 @@
 @synthesize annotation;
 @synthesize addressText;
 @synthesize dateText;
+@synthesize noteLabel;
 @synthesize saleText;
 
 PFObject *annotationObj;
 NSString *address;
 NSDate *date;
-
+NSString *note;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -59,6 +60,7 @@ NSDate *date;
                 for (PFObject *visit in visits) {
                     annotationObj = visit;
                     address = visit[@"address"];
+                    note = visit[@"note"];
                     date = visit.createdAt;
         
                     // set up the view
@@ -100,30 +102,31 @@ NSDate *date;
     NSString *stringFromDate = [formatter stringFromDate:date];
     dateText.text = stringFromDate;
     
-    
-    // sale text
-    [saleText.layer setBorderColor:[[[UIColor grayColor] colorWithAlphaComponent:0.5] CGColor]];
-    [saleText.layer setBorderWidth:2.0];
-    
-    //The rounded corner part, where you specify your view's corner radius:
-    saleText.layer.cornerRadius = 5;
-    saleText.clipsToBounds = YES;
-    
     if ([annotationObj[@"reaction"]  isEqual: @YES]) {
-        saleText.text = @"Popcorn was previously sold to the resident.";
-        
-        // set text color
+        // set text color green
         addressText.textColor = [UIColor colorWithRed:0.33 green:0.85 blue:0.11 alpha:1];
         dateText.textColor = [UIColor colorWithRed:0.33 green:0.85 blue:0.11 alpha:1];
         saleText.textColor = [UIColor colorWithRed:0.33 green:0.85 blue:0.11 alpha:1];
         
     } else {
-        saleText.text = @"This resident did not like the popcorn.";
-        
-        // set text color
+        // set text color red
         addressText.textColor = [UIColor colorWithRed:1.00 green:0.20 blue:0.22 alpha:1];
         dateText.textColor = [UIColor colorWithRed:1.00 green:0.20 blue:0.22 alpha:1];
         saleText.textColor = [UIColor colorWithRed:1.00 green:0.20 blue:0.22 alpha:1];
+    }
+    
+    if (note) {
+        // sale text
+        [saleText.layer setBorderColor:[[[UIColor grayColor] colorWithAlphaComponent:0.5] CGColor]];
+        [saleText.layer setBorderWidth:2.0];
+        
+        //The rounded corner part, where you specify your view's corner radius:
+        saleText.layer.cornerRadius = 5;
+        saleText.clipsToBounds = YES;
+        
+        saleText.text = note;
+    } else {
+        noteLabel.text = @"";
     }
 }
 
