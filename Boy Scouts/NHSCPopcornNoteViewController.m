@@ -14,6 +14,13 @@
 
 @implementation NHSCPopcornNoteViewController
 
+@synthesize annotationObj;
+@synthesize parent;
+@synthesize noteText;
+
+NSString *note;
+
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -27,6 +34,41 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self loadNote];
+}
+
+- (void)loadNote {
+    note = annotationObj[@"note"];
+    
+    if(note) {
+        noteText.text = note;
+    }
+    
+    // change the style of the border
+    [noteText.layer setBorderColor:[[[UIColor grayColor] colorWithAlphaComponent:0.5] CGColor]];
+    [noteText.layer setBorderWidth:2.0];
+    
+    //The rounded corner part, where you specify your view's corner radius:
+    noteText.layer.cornerRadius = 5;
+    noteText.clipsToBounds = YES;
+}
+
+- (IBAction)cancelButtonClicked:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)doneButtonClicked:(id)sender {
+    // sent to server
+    
+    if (note != noteText.text) {
+        // save the note
+        annotationObj[@"note"] = noteText.text;
+        [annotationObj saveInBackground];
+    }
+    // update the parent view before going back
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,5 +87,6 @@
     // Pass the selected object to the new view controller.
 }
 */
+
 
 @end

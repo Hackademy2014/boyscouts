@@ -7,6 +7,7 @@
 //
 
 #import "NHSCPopcornDetailsViewController.h"
+#import "NHSCPopcornNoteViewController.h"
 
 @interface NHSCPopcornDetailsViewController ()
 
@@ -126,6 +127,7 @@ NSString *note;
         
         saleText.text = note;
     } else {
+        // note is not available
         noteLabel.text = @"";
     }
 }
@@ -143,15 +145,19 @@ NSString *note;
     }];
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if([[segue identifier] isEqualToString:@"popcornNote"]) {
+        // set the address for query
+        NHSCPopcornNoteViewController *note = [segue destinationViewController];
+        note.annotationObj = annotationObj;
+        note.parent = self;
+    }
 }
-*/
+
 
 @end

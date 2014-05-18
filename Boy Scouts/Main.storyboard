@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hoJ-YK-dYh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hoJ-YK-dYh">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -327,7 +327,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kC-Ag-bK9">
-                                <rect key="frame" x="20" y="308" width="280" height="60"/>
+                                <rect key="frame" x="20" y="308" width="280" height="185"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -350,7 +350,7 @@
                     <navigationItem key="navigationItem" title="Popcorn Sale Details" id="vtu-Kl-lFN">
                         <barButtonItem key="rightBarButtonItem" title="Note" id="cJ5-Ag-0tO">
                             <connections>
-                                <segue destination="8Jg-58-IyD" kind="push" identifier="popcornNote" id="oHy-mf-M81"/>
+                                <segue destination="8Jg-58-IyD" kind="modal" identifier="popcornNote" id="oHy-mf-M81"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -378,12 +378,30 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bq4-ER-9Ah">
-                                <rect key="frame" x="20" y="80" width="280" height="370"/>
+                                <rect key="frame" x="20" y="97" width="280" height="185"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EKL-DD-PLx">
+                                <rect key="frame" x="0.0" y="21" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Note" id="4jy-EQ-obo">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="b2b-wl-vFr">
+                                            <connections>
+                                                <action selector="cancelButtonClicked:" destination="8Jg-58-IyD" id="6zP-QA-7Ph"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Done" id="2i2-Kt-rwL">
+                                            <connections>
+                                                <action selector="doneButtonClicked:" destination="8Jg-58-IyD" id="EdW-bO-JLZ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -724,7 +742,7 @@ Manchester, NH 03109</string>
                                 <rect key="frame" x="20" y="7" width="280" height="527"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <mutableString key="text">ABOUT THE DANIEL WEBSTER COUNCIL #330
+                                <string key="text">ABOUT THE DANIEL WEBSTER COUNCIL #330
 
 The Daniel Webster Council McIninch Service Center, located at 571 Holt Avenue in Manchester, New Hampshire, is the operations center for all of the Council’s activities throughout the year. The McIninch Service Center is the catalyst for policy, planning, information, and most important, the stimulation and inspiration that mobilizes our tremendous volunteer organization. The McIninch Service Center enables key volunteer leadership and community resources to promote and enrich the Scouting program for thousands of youth members in our nine-district service area.
 
@@ -773,7 +791,7 @@ The council quickly grew, and a year later included the entire state with the ex
  
 Today, Scouting remains strong in New Hampshire and the entire nation. Scouts are still guided by the ideals of the Scout Oath and Law, having come to the aid of their neighbors and communities in ways both large and small. Whether it's planting victory gardens, promoting literacy or donor awareness, or coming to the aid of disasters victims, the Boy Scouts of America built a tradition of service that helped shape the nation.
 
-Source: www.nhscouting.org</mutableString>
+Source: www.nhscouting.org</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>

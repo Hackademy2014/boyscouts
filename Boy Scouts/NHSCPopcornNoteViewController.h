@@ -12,7 +12,10 @@
 @interface NHSCPopcornNoteViewController : UIViewController
 
 @property (weak, nonatomic) NHSCPopcornDetailsViewController *parent;
-@property (weak, nonatomic) NSString *address;
+@property (weak, nonatomic) PFObject *annotationObj;
 @property (weak, nonatomic) IBOutlet UITextView *noteText;
+
+- (IBAction)cancelButtonClicked:(id)sender;
+- (IBAction)doneButtonClicked:(id)sender;
 
 @end
