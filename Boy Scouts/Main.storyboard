@@ -302,22 +302,74 @@
             </objects>
             <point key="canvasLocation" x="2701" y="-1053"/>
         </scene>
-        <!--Table View Controller-->
+        <!--News Details View Controller - News Detail-->
+        <scene sceneID="Clt-R3-abh">
+            <objects>
+                <viewController id="YQn-lE-Q3u" customClass="NHSCNewsDetailsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hE5-gA-jmZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="AFr-ge-OZF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="h1y-sj-Ucl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VBP-ne-kxj">
+                                <rect key="frame" x="0.0" y="66" width="320" height="502"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="News Detail" id="X42-1Z-cCe"/>
+                    <connections>
+                        <outlet property="webView" destination="VBP-ne-kxj" id="EFh-OV-Czl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wjK-h7-Wpa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2701" y="-360"/>
+        </scene>
+        <!--News Main Table View Controller - News-->
         <scene sceneID="5xD-lo-To5">
             <objects>
-                <tableViewController id="qBa-08-uWh" sceneMemberID="viewController">
+                <tableViewController id="qBa-08-uWh" customClass="NHSCNewsMainTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="wHP-u9-M4y">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="goE-cA-aBL">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="F7S-bK-Y1Q" detailTextLabel="X1Q-hy-7jZ" imageView="Cgg-wI-LQ0" style="IBUITableViewCellStyleSubtitle" id="goE-cA-aBL">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="goE-cA-aBL" id="Kkt-nM-YrQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="F7S-bK-Y1Q">
+                                            <rect key="frame" x="67" y="3" width="34" height="22"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="X1Q-hy-7jZ">
+                                            <rect key="frame" x="67" y="25" width="43" height="15"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="DWCheaderlogo.png" id="Cgg-wI-LQ0">
+                                            <rect key="frame" x="15" y="0.0" width="37" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="YQn-lE-Q3u" kind="push" identifier="showDetail" id="WIA-Qb-BUT"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -325,7 +377,7 @@
                             <outlet property="delegate" destination="qBa-08-uWh" id="F9q-0C-1Ro"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="qme-pd-J8q"/>
+                    <navigationItem key="navigationItem" title="News" id="qme-pd-J8q"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="csk-Ek-Lza" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -555,6 +607,7 @@ Monday - Friday, 8:00 AM - 4:30 PM</string>
         </scene>
     </scenes>
     <resources>
+        <image name="DWCheaderlogo.png" width="52" height="60"/>
         <image name="center_direction-25.png" width="25" height="25"/>
         <image name="checkmark-25.png" width="25" height="25"/>
         <image name="delete_sign-25.png" width="25" height="25"/>
