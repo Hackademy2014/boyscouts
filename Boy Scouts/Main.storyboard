@@ -136,7 +136,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Food Donation" id="xsd-rf-7Gu"/>
+                    <navigationItem key="navigationItem" title="Food Donation" id="xsd-rf-7Gu">
+                        <barButtonItem key="rightBarButtonItem" image="center_direction-25.png" id="2jr-Uu-FBH">
+                            <connections>
+                                <action selector="locateButtonClicked:" destination="90f-VD-MmA" id="PmK-3Y-KtG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="MvE-HS-47W" id="qbq-Oa-vo7"/>
                     </connections>

@@ -49,7 +49,7 @@
  * Finds the nearby locations that have record for the popcorn
  */
 - (void)displayAnnotations {
-
+    
     // remove all annocations
     [self.mapView removeAnnotations:self.mapView.annotations];
     
@@ -89,7 +89,7 @@
     
 }
 
-    
+
 /*
  * get the address from location
  */
@@ -116,6 +116,11 @@
     return address;
 }
 
+// center the user's current location in the map view
+- (IBAction)locateButtonClicked:(id)sender {
+    region = MKCoordinateRegionMakeWithDistance(currentLocation.location.coordinate, 500, 500);
+    [self.mapView setRegion:region animated:YES];
+}
 
 /*
  * stores the food pickup location for future pickup
@@ -151,7 +156,15 @@
                 visit[@"address"] = address;
                 [visit saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                     if(succeeded) {
-                        //update the view
+                        // creates annotation and updates the view
+                        CLLocationCoordinate2D visitCoordinate = CLLocationCoordinate2DMake(currentLocation.location.coordinate.latitude, currentLocation.location.coordinate.longitude);
+                        
+                        NHSCPlaceAnnotation *pin = [[NHSCPlaceAnnotation alloc] init];
+                        pin.coordinate = visitCoordinate;
+                        pin.title = address;
+                        
+                        // adds annotation to the map
+                        [self.mapView addAnnotation:pin];
                     }
                 }];
             } else {

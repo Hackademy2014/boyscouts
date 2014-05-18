@@ -19,5 +19,7 @@
 @property (nonatomic, strong) MKUserLocation *currentLocation;
 
 - (IBAction)pickButtonClicked:(id)sender;
+- (IBAction)locateButtonClicked:(id)sender;
+
 
 @end
