@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NHSCPlaceAnnotation.h"
 
 @interface NHSCDonationDetailsViewController : UIViewController
+
+@property (strong, nonatomic) NHSCPlaceAnnotation *annotation;
 
 @end
