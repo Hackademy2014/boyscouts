@@ -8,6 +8,7 @@
 
 #import "NHSCDonationDetailsViewController.h"
 #import  <QuartzCore/QuartzCore.h>
+#import <Parse/Parse.h>
 
 @interface NHSCDonationDetailsViewController ()
 
@@ -18,6 +19,10 @@
 @synthesize annotation;
 @synthesize addressText;
 @synthesize dateText;
+
+PFObject *annotationObj;
+NSString *address;
+NSDate *dateToPickup;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,13 +37,43 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    [self loadAnnotation];
-    
+    [self findDonnationFromDB];
 }
 
--(void) loadAnnotation {
-    // address
+// find the annotation from database
+-(void)findDonnationFromDB {
+    PFQuery *query = [PFQuery queryWithClassName:@"FoodDonationVisits"];
+    [query whereKey:@"address" equalTo:annotation.title];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *visits, NSError *error) {
+        if (!error) {
+            // The find succeeded.
+            if (visits.count == 1) {
+                // Do something with the found objects
+                for (PFObject *visit in visits) {
+                    address = visit[@"address"];
+                    dateToPickup = visit.createdAt;
+                    
+                    // adds a week to the created date
+                    NSCalendar *calendar=[NSCalendar currentCalendar];
+                    NSDateComponents *components = [[NSDateComponents alloc]init];
+                    components.day = 7;
+                    dateToPickup =[calendar dateByAddingComponents:components toDate:dateToPickup options:0];
+                    
+                    // set up the view
+                    [self loadAnnotation];
+                }
+                
+            }
+        } else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
+}
+
+-(void)loadAnnotation {
+    
+    // address text view
     //To make the border look very close to a UITextField
     [addressText.layer setBorderColor:[[[UIColor grayColor] colorWithAlphaComponent:0.5] CGColor]];
     [addressText.layer setBorderWidth:2.0];
@@ -47,10 +82,34 @@
     addressText.layer.cornerRadius = 5;
     addressText.clipsToBounds = YES;
     
-    addressText.text = annotation.title;
+    addressText.text = address;
     
+    // date to pick up
+    [dateText.layer setBorderColor:[[[UIColor grayColor] colorWithAlphaComponent:0.5] CGColor]];
+    [dateText.layer setBorderWidth:2.0];
+    
+    //The rounded corner part, where you specify your view's corner radius:
+    dateText.layer.cornerRadius = 5;
+    dateText.clipsToBounds = YES;
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"EEEE MMMM d, YYYY"];
+    
+    //Optionally for time zone converstions
+    [formatter setTimeZone:[NSTimeZone timeZoneWithName:@"..."]];
+    
+    NSString *stringFromDate = [formatter stringFromDate:dateToPickup];
+    dateText.text = stringFromDate;
     
 #warning adds the date to pick up here
+    
+}
+
+
+/*
+ * untrack this location by removing it from the database
+ */
+- (IBAction)untrackLocation:(id)sender {
     
 }
 
@@ -61,14 +120,14 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+ {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end
