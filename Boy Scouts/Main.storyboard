@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hoJ-YK-dYh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hoJ-YK-dYh">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -134,6 +134,7 @@
                         <segue destination="gas-sn-tqd" kind="custom" identifier="foodDonation" customClass="AMSlideMenuContentSegue" id="oPw-kH-U0x"/>
                         <segue destination="hm8-9U-TR2" kind="custom" identifier="News" customClass="AMSlideMenuContentSegue" id="DFc-ma-u3c"/>
                         <segue destination="qef-6Q-DhI" kind="custom" identifier="contact" customClass="AMSlideMenuContentSegue" id="HpK-Df-H1M"/>
+                        <segue destination="rKY-bJ-FOK" kind="custom" identifier="about" customClass="AMSlideMenuContentSegue" id="pqt-Sq-HAk"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7h5-Iw-Car" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -184,7 +185,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rr3-Tw-zUj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2437" y="163"/>
+            <point key="canvasLocation" x="2037" y="-1053"/>
         </scene>
         <!--Map Location View Controller - Popcorn Locations-->
         <scene sceneID="naE-Nf-ZLV">
@@ -240,7 +241,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tbd-Mi-D3w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2437" y="-511"/>
+            <point key="canvasLocation" x="2037" y="-1727"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="5xD-lo-To5">
@@ -269,7 +270,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="csk-Ek-Lza" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2437" y="856"/>
+            <point key="canvasLocation" x="2037" y="-360"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="GtX-pq-Utp">
@@ -287,7 +288,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f4b-dm-1pH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1911" y="163"/>
+            <point key="canvasLocation" x="1511" y="-1053"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hDy-Ce-jB2">
@@ -305,7 +306,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XZH-vo-Krh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1911" y="-511"/>
+            <point key="canvasLocation" x="1511" y="-1727"/>
         </scene>
         <!--Contact Us View Controller-->
         <scene sceneID="LFK-cD-sXV">
@@ -418,7 +419,26 @@ Monday - Friday, 8:00 AM - 4:30 PM</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8A9-j1-zK1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1277" y="982"/>
+            <point key="canvasLocation" x="2037" y="382"/>
+        </scene>
+        <!--About Us View Controller-->
+        <scene sceneID="UFS-dL-uNH">
+            <objects>
+                <viewController id="7fM-Cp-fgG" customClass="NHSCAboutUsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="e8C-ht-VNx"/>
+                        <viewControllerLayoutGuide type="bottom" id="r4G-Wf-eR9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zxW-f5-mvj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1Lf-DK-PPd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d8v-KL-BbP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2037" y="1102"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ueZ-k9-M2E">
@@ -436,7 +456,7 @@ Monday - Friday, 8:00 AM - 4:30 PM</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rtm-Ij-f3q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1903" y="856"/>
+            <point key="canvasLocation" x="1503" y="-360"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="n4c-yT-W0s">
@@ -454,7 +474,25 @@ Monday - Friday, 8:00 AM - 4:30 PM</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="anp-Yt-msI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="879" y="982"/>
+            <point key="canvasLocation" x="1511" y="382"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DQb-hz-XFd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rKY-bJ-FOK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QAm-NL-RO9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7fM-Cp-fgG" kind="relationship" relationship="rootViewController" id="jKI-1h-Wst"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CQV-PP-uUq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1516" y="1102"/>
         </scene>
     </scenes>
     <resources>
