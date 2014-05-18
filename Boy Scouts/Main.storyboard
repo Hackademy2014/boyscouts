@@ -394,7 +394,7 @@
                                                 <action selector="cancelButtonClicked:" destination="8Jg-58-IyD" id="6zP-QA-7Ph"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Done" id="2i2-Kt-rwL">
+                                        <barButtonItem key="rightBarButtonItem" title="Save" id="2i2-Kt-rwL">
                                             <connections>
                                                 <action selector="doneButtonClicked:" destination="8Jg-58-IyD" id="EdW-bO-JLZ"/>
                                             </connections>
@@ -469,6 +469,20 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Note" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPq-3o-04M">
+                                <rect key="frame" x="20" y="279" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uxa-Af-Y9L">
+                                <rect key="frame" x="20" y="308" width="280" height="185"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.63791646049999995" green="0.33422893209999999" blue="0.71960698339999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -490,16 +504,18 @@
                     <connections>
                         <outlet property="addressText" destination="cUi-b6-oNr" id="d8y-Xb-BbA"/>
                         <outlet property="dateText" destination="pUh-l5-fXS" id="daJ-ow-KrJ"/>
+                        <outlet property="noteLabel" destination="LPq-3o-04M" id="R2u-Em-Wy6"/>
+                        <outlet property="noteText" destination="Uxa-Af-Y9L" id="Lyv-Ii-eIC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="06N-Ah-T0u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2565" y="-1053"/>
         </scene>
-        <!--Donation View Controller-->
+        <!--Donation Note View Controller-->
         <scene sceneID="w8k-Xk-HuB">
             <objects>
-                <viewController id="L5X-j3-Y9A" customClass="NHSCDonationViewController" sceneMemberID="viewController">
+                <viewController id="L5X-j3-Y9A" customClass="NHSCDonationNoteViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="48h-4E-7PA"/>
                         <viewControllerLayoutGuide type="bottom" id="jQG-ti-JQm"/>
@@ -518,7 +534,7 @@
                                                 <action selector="cancelButtonClicked:" destination="L5X-j3-Y9A" id="PyT-9L-U9H"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Done" id="nLz-aQ-zjo">
+                                        <barButtonItem key="rightBarButtonItem" title="Save" id="nLz-aQ-zjo">
                                             <connections>
                                                 <action selector="doneButtonClicked:" destination="L5X-j3-Y9A" id="Rr6-se-FoS"/>
                                             </connections>

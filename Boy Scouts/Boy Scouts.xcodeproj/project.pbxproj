@@ -66,7 +66,7 @@
 		D691189D1926418F00925BB0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D691189B1926418F00925BB0 /* InfoPlist.strings */; };
 		D691189F1926418F00925BB0 /* Boy_ScoutsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D691189E1926418F00925BB0 /* Boy_ScoutsTests.m */; };
 		D6B1AC2A1928E5BB000EF655 /* NHSCPopcornNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B1AC291928E5BB000EF655 /* NHSCPopcornNoteViewController.m */; };
-		D6B1AC2D1928F6EC000EF655 /* NHSCDonationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B1AC2C1928F6EC000EF655 /* NHSCDonationViewController.m */; };
+		D6B1AC2D1928F6EC000EF655 /* NHSCDonationNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B1AC2C1928F6EC000EF655 /* NHSCDonationNoteViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -166,8 +166,8 @@
 		D691189E1926418F00925BB0 /* Boy_ScoutsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Boy_ScoutsTests.m; sourceTree = "<group>"; };
 		D6B1AC281928E5BB000EF655 /* NHSCPopcornNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NHSCPopcornNoteViewController.h; sourceTree = "<group>"; };
 		D6B1AC291928E5BB000EF655 /* NHSCPopcornNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NHSCPopcornNoteViewController.m; sourceTree = "<group>"; };
-		D6B1AC2B1928F6EC000EF655 /* NHSCDonationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NHSCDonationViewController.h; sourceTree = "<group>"; };
-		D6B1AC2C1928F6EC000EF655 /* NHSCDonationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NHSCDonationViewController.m; sourceTree = "<group>"; };
+		D6B1AC2B1928F6EC000EF655 /* NHSCDonationNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NHSCDonationNoteViewController.h; sourceTree = "<group>"; };
+		D6B1AC2C1928F6EC000EF655 /* NHSCDonationNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NHSCDonationNoteViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,8 +268,8 @@
 		D691186D1926418F00925BB0 = {
 			isa = PBXGroup;
 			children = (
-				D6B1AC2B1928F6EC000EF655 /* NHSCDonationViewController.h */,
-				D6B1AC2C1928F6EC000EF655 /* NHSCDonationViewController.m */,
+				D6B1AC2B1928F6EC000EF655 /* NHSCDonationNoteViewController.h */,
+				D6B1AC2C1928F6EC000EF655 /* NHSCDonationNoteViewController.m */,
 				D6B1AC281928E5BB000EF655 /* NHSCPopcornNoteViewController.h */,
 				D6B1AC291928E5BB000EF655 /* NHSCPopcornNoteViewController.m */,
 				D66B275F1928848B0060ED61 /* NHSCPopcornDetailsViewController.h */,
@@ -512,7 +512,7 @@
 				D6821BF91926F63E00C079A7 /* NHSCPlaceAnnotation.m in Sources */,
 				D63DB17919286CA100A3BA07 /* NHSCNewsDetailsViewController.m in Sources */,
 				D63DB17619286C5300A3BA07 /* NHSCNewsMainTableViewController.m in Sources */,
-				D6B1AC2D1928F6EC000EF655 /* NHSCDonationViewController.m in Sources */,
+				D6B1AC2D1928F6EC000EF655 /* NHSCDonationNoteViewController.m in Sources */,
 				D6821BCE19265B5400C079A7 /* AMSlideMenuRightMenuSegue.m in Sources */,
 				753EF4D319283A4C00733F0D /* NHSCContactUsViewController.m in Sources */,
 				753EF4CE19281A9D00733F0D /* NHSCAboutUsViewController.m in Sources */,

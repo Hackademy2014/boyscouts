@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "NHSCDonationDetailsViewController.h"
 
-@interface NHSCDonationViewController : UIViewController
+@interface NHSCDonationNoteViewController : UIViewController
 
 @property (weak, nonatomic) NHSCDonationDetailsViewController *parent;
 @property (weak, nonatomic) PFObject *annotationObj;
