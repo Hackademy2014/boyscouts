@@ -245,9 +245,9 @@
 		D691186D1926418F00925BB0 = {
 			isa = PBXGroup;
 			children = (
-				D6668B181928715200B3309A /* NewsViews */,
 				D63DB1711928570600A3BA07 /* NHSCDonationDetailsViewController.h */,
 				D63DB1721928570600A3BA07 /* NHSCDonationDetailsViewController.m */,
+				D6668B181928715200B3309A /* NewsViews */,
 				D63DB1701928500B00A3BA07 /* TestLocations */,
 				D63DB16F19284FEE00A3BA07 /* Helpers */,
 				D6821BFA1926F64700C079A7 /* Models */,

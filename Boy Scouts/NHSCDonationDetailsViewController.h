@@ -13,7 +13,8 @@
 
 @property (weak, nonatomic) NHSCPlaceAnnotation *annotation;
 
-@property (weak, nonatomic) IBOutlet UILabel *addressLabel;
-@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+@property (weak, nonatomic) IBOutlet UITextView *addressText;
+@property (weak, nonatomic) IBOutlet UITextView *dateText;
+
 
 @end

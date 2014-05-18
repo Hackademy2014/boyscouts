@@ -7,6 +7,7 @@
 //
 
 #import "NHSCDonationDetailsViewController.h"
+#import  <QuartzCore/QuartzCore.h>
 
 @interface NHSCDonationDetailsViewController ()
 
@@ -15,8 +16,8 @@
 @implementation NHSCDonationDetailsViewController
 
 @synthesize annotation;
-@synthesize addressLabel;
-@synthesize dateLabel;
+@synthesize addressText;
+@synthesize dateText;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -37,7 +38,20 @@
 }
 
 -(void) loadAnnotation {
-    addressLabel.text = annotation.title;
+    // address
+    //To make the border look very close to a UITextField
+    [addressText.layer setBorderColor:[[[UIColor grayColor] colorWithAlphaComponent:0.5] CGColor]];
+    [addressText.layer setBorderWidth:2.0];
+    
+    //The rounded corner part, where you specify your view's corner radius:
+    addressText.layer.cornerRadius = 5;
+    addressText.clipsToBounds = YES;
+    
+    addressText.text = annotation.title;
+    
+    
+#warning adds the date to pick up here
+    
 }
 
 - (void)didReceiveMemoryWarning
