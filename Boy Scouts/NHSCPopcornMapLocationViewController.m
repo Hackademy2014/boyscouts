@@ -9,6 +9,7 @@
 #import "NHSCPopcornMapLocationViewController.h"
 #import "NHSCPlaceAnnotation.h"
 #import "NHSCAddressHelper.h"
+#import "NHSCPopcornDetailsViewController.h"
 
 @interface NHSCPopcornMapLocationViewController ()
 
@@ -317,16 +318,34 @@
     return annotationView;
 }
 
-
 /*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
- {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
+ * Open the detail view for the selected annotation
  */
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
+    
+    [self performSegueWithIdentifier:@"showPopcornDetails" sender:view];
+}
+
+
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([[segue identifier] isEqualToString:@"showPopcornDetails"]) {
+        
+        // get the associated annotation
+        MKAnnotationView *view = (MKAnnotationView *)sender;
+        NHSCPlaceAnnotation *pin = view.annotation;
+        
+        // Get the new view controller using [segue destinationViewController].
+        NHSCPopcornDetailsViewController *dest = [segue destinationViewController];
+        
+        // Pass the selected object to the new view controller.
+        dest.annotation = pin;
+        dest.parent = self;
+        
+    }
+}
 
 @end

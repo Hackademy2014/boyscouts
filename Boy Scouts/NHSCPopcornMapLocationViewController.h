@@ -22,5 +22,6 @@
 - (IBAction)locateButtonClicked:(id)sender;
 - (IBAction)checkButtonClicked:(id)sender;
 - (IBAction)noPopcornButtonClicked:(id)sender;
+- (void)displayAnnotations;
 
 @end

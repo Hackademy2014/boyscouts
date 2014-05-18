@@ -184,7 +184,7 @@
     if (!annotationView)
     {
         annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
-        annotationView.animatesDrop = YES;
+        annotationView.animatesDrop = NO;
         annotationView.canShowCallout = YES;
     }else {
         annotationView.annotation = annotation;

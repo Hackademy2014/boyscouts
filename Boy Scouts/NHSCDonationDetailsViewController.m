@@ -97,9 +97,6 @@ NSDate *dateToPickup;
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"EEEE MMMM d, YYYY"];
     
-    //Optionally for time zone converstions
-    [formatter setTimeZone:[NSTimeZone timeZoneWithName:@"..."]];
-    
     NSString *stringFromDate = [formatter stringFromDate:dateToPickup];
     dateText.text = stringFromDate;
 }
