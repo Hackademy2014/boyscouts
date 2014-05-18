@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hoJ-YK-dYh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hoJ-YK-dYh">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -670,7 +670,7 @@ Manchester, NH 03109</string>
             </objects>
             <point key="canvasLocation" x="2037" y="382"/>
         </scene>
-        <!--About Us View Controller-->
+        <!--About Us View Controller - About Us-->
         <scene sceneID="UFS-dL-uNH">
             <objects>
                 <viewController id="7fM-Cp-fgG" customClass="NHSCAboutUsViewController" sceneMemberID="viewController">
@@ -681,9 +681,69 @@ Manchester, NH 03109</string>
                     <view key="view" contentMode="scaleToFill" id="zxW-f5-mvj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJL-9i-SOC">
+                                <rect key="frame" x="20" y="7" width="280" height="527"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <mutableString key="text">ABOUT THE DANIEL WEBSTER COUNCIL #330
+
+The Daniel Webster Council McIninch Service Center, located at 571 Holt Avenue in Manchester, New Hampshire, is the operations center for all of the Council’s activities throughout the year. The McIninch Service Center is the catalyst for policy, planning, information, and most important, the stimulation and inspiration that mobilizes our tremendous volunteer organization. The McIninch Service Center enables key volunteer leadership and community resources to promote and enrich the Scouting program for thousands of youth members in our nine-district service area.
+
+The Daniel Webster Council covers eight geographical areas, broken into districts. Abnaki, Arrowhead, Historic, Massabesic, Mt Monadnock, Nutfield, Sunapee and Wannalancit.
+
+You can call (603) 625-6431 to reach our receptionist between the hours of 8:30 AM to 5:00 PM (during the months of June through August, office hours are 8:00 AM to 4:30 PM). New Hampshire residents may also use the toll-free number,1-800-221-0009.
+
+
+MISSION STATEMENT
+
+The Mission of the Boy Scouts of America is to prepare young people to make ethical choices over their lifetimes by instilling in them the values of the Scout Oath and Law. 
+
+
+SCOUT OATH
+
+On my honor I will do my best To do my duty to God and my country and to obey the Scout Law; To help other people at all times; To keep myself physically strong, mentally awake, and morally straight. 
+
+
+SCOUT LAW
+
+A Scout is: Trustworthy, Loyal, Helpful, Friendly, Courteous, Kind, Obedient, Cheerful, Thrifty, Brave, Clean, and Reverent. 
+
+
+HISTORY
+
+In 1907, British Army Lieutenant General and Boer War Hero Robert Baden-Powell held an experimental camp at Brownsea, a small island in Poole Harbor, Dorset, England. Twenty boys from different classes of society participated in the camp in which Baden-Powell tried out his own methods of training in citizenship through woodcraft and camping. He incorporated these ideas into his handbook, Scouting For Boys, which he wrote the following year. 
+
+The success of the camp at Brownsea Island led to the formal establishment of Scouting in Great Britain in 1908, and the movement soon spread world-wide.
+Millionaire Chicago publisher William D. Boyce became involved in Scouting in 1909 when he was visiting London. One afternoon in August, the city was enshrouded in pea-soup fog. Boyce lost his bearings in the murk and was approached by a boy of about 12 carrying a lantern who offered to guide him to the address he was seeking. When Boyce produced a shilling, the boy replied, "No, sir, I am a Scout. Scouts do not accept tips for Good Turns."
+
+The unknown Scout took Boyce to British Scout headquarters. From that moment forward, Boyce's interest in Scouting grew. Boyce came home determined to start an official Boy Scouting organization in America.
+
+On February 8, 1910, Boyce filed incorporation papers for the Boy Scouts of America. The purpose, he said, "Shall be to promote, through organization, and cooperation with other agencies, the ability of boys to do things for themselves and others, to train them in Scoutcraft, and to teach them patriotism, courage, self-reliance, and kindred virtues, using the methods which are in common use by Boy Scouts."
+
+Scouting soon spread across the United States. The new Boy Scouts of America quickly established a national office, developed a temporary handbook, received Baden-Powell's endorsement, and began to work to get a Congressional Charter from the US Congress (which was granted in 1916).
+
+Scouting first came to New Hampshire in 1912, two years after the founding of the Boy Scouts of America. In February of that year, a volunteer-led council was organized in the City of Manchester, originally consisting of two troops chartered by the YMCA. By 1916, there were four such councils in New Hampshire, located in the cities of Manchester, Dover, Claremont, and Portsmouth.
+
+Finally, in October of 1919, a first class council with a Scout Executive was established. The Manchester Council was formally presented with its charter on January 9, 1920. At the time of the council’s formation, there were ten troops and 256 Scouts in Manchester. In addition to these, there were 87 troops and 1621 Scouts in New Hampshire who were outside the jurisdiction of the Manchester Council (the only council in the state). The Manchester Council nearly doubled in its first few years.  At the end of 1924, there were 450 scouts in 22 troops.
+
+As a sign of the council’s health, the Manchester Council purchased Camp Manning in Gilmanton Iron Works as their summer camp in 1925. Scouting in the rest of New Hampshire, however, was not growing with only 1410 Scouts in 73 troops outside of Manchester in 1924. The need to better serve scouts throughout the whole state eventually led to the organization of a council to encompass the state of New Hampshire. 
+
+On May 25, 1929, the Daniel Webster Council was formally organized, replacing the old Manchester Council. The name of the new council, named after the great 19th century statesman who was born, raised, and educated in New Hampshire, was chosen to symbolize the type of citizenship needed to inspire the youth of New Hampshire to do their best as scouts and future leaders. 
+
+The council quickly grew, and a year later included the entire state with the exception of ten towns. Daniel Webster Council operated Camp Manning until 1945, when Camp Carpenter in Manchester, which was being used as a camp for the Scouts of Manchester since the 1930s, became the official camp of the Daniel Webster Council. In 1970, Daniel Webster Council purchased Hidden Valley Scout Camp in Gilmanton Iron Works, then purchased the adjacent old Camp Manning property in the 1990s which was re-opened as Camp Bell in 2000.
+ 
+Today, Scouting remains strong in New Hampshire and the entire nation. Scouts are still guided by the ideals of the Scout Oath and Law, having come to the aid of their neighbors and communities in ways both large and small. Whether it's planting victory gardens, promoting literacy or donor awareness, or coming to the aid of disasters victims, the Boy Scouts of America built a tradition of service that helped shape the nation.
+
+Source: www.nhscouting.org</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="1Lf-DK-PPd"/>
+                    <navigationItem key="navigationItem" title="About Us" id="1Lf-DK-PPd"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d8v-KL-BbP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
