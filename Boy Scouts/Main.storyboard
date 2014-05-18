@@ -181,6 +181,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="MvE-HS-47W" id="qbq-Oa-vo7"/>
+                        <segue destination="pk8-zD-zxI" kind="push" identifier="showDonationDetails" id="mc4-5e-JXe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rr3-Tw-zUj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -242,6 +243,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tbd-Mi-D3w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2037" y="-1727"/>
+        </scene>
+        <!--Donation Details View Controller-->
+        <scene sceneID="2uf-WI-Ldq">
+            <objects>
+                <viewController id="pk8-zD-zxI" customClass="NHSCDonationDetailsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rDg-k0-Lcg"/>
+                        <viewControllerLayoutGuide type="bottom" id="g6b-LE-wjB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jzy-C8-39u">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="85w-nE-J8M"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="06N-Ah-T0u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2701" y="-1053"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="5xD-lo-To5">

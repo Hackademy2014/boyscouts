@@ -9,6 +9,7 @@
 #import "NHSCDonationMapLocationViewController.h"
 #import "NHSCPlaceAnnotation.h"
 #import "NHSCAddressHelper.h"
+#import "NHSCDonationDetailsViewController.h"
 
 @interface NHSCDonationMapLocationViewController ()
 
@@ -192,19 +193,30 @@
     // set the color of the pin
     annotationView.pinColor = MKPinAnnotationColorPurple;
     
+    // adds button to the annotation
     annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
     return annotationView;
 }
 
 /*
+ * Open the detail view for the selected annotation
+ */
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
+    
+    [self performSegueWithIdentifier:@"showDonationDetails" sender:view];
+}
+
+
  #pragma mark - Navigation
  
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
- {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Get the new view controller using [segue destinationViewController].
+    NHSCDonationDetailsViewController *dest = [segue destinationViewController];
+    
+    // Pass the selected object to the new view controller.
+}
+
 
 @end
