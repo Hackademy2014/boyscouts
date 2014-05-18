@@ -24,6 +24,7 @@ PFObject *annotationObj;
 NSString *address;
 NSDate *date;
 
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -110,8 +111,19 @@ NSDate *date;
     
     if ([annotationObj[@"reaction"]  isEqual: @YES]) {
         saleText.text = @"Popcorn was previously sold to the resident.";
+        
+        // set text color
+        addressText.textColor = [UIColor colorWithRed:0.33 green:0.85 blue:0.11 alpha:1];
+        dateText.textColor = [UIColor colorWithRed:0.33 green:0.85 blue:0.11 alpha:1];
+        saleText.textColor = [UIColor colorWithRed:0.33 green:0.85 blue:0.11 alpha:1];
+        
     } else {
-        saleText.text = @"Resident did not like the popcorn.";
+        saleText.text = @"This resident did not like the popcorn.";
+        
+        // set text color
+        addressText.textColor = [UIColor colorWithRed:1.00 green:0.20 blue:0.22 alpha:1];
+        dateText.textColor = [UIColor colorWithRed:1.00 green:0.20 blue:0.22 alpha:1];
+        saleText.textColor = [UIColor colorWithRed:1.00 green:0.20 blue:0.22 alpha:1];
     }
 }
 

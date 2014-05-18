@@ -228,7 +228,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KXl-9c-Kxb">
                                 <rect key="frame" x="0.0" y="523" width="160" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.71405187380000001" green="1" blue="0.61755967739999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.32941176470588235" green="1" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="gTA-Hq-Jtc"/>
                                 </constraints>
