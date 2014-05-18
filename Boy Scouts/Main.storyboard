@@ -347,7 +347,13 @@
                             <constraint firstAttribute="trailing" secondItem="Ecx-VQ-X8f" secondAttribute="trailing" id="vD2-do-qTo"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Popcorn Sale Details" id="vtu-Kl-lFN"/>
+                    <navigationItem key="navigationItem" title="Popcorn Sale Details" id="vtu-Kl-lFN">
+                        <barButtonItem key="rightBarButtonItem" title="Note" id="cJ5-Ag-0tO">
+                            <connections>
+                                <segue destination="8Jg-58-IyD" kind="push" identifier="popcornNote" id="oHy-mf-M81"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="addressText" destination="G9L-Pk-qYM" id="Jpi-tk-dpS"/>
                         <outlet property="dateText" destination="aJR-MT-ylJ" id="UHs-vO-Xoz"/>
@@ -358,6 +364,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NaZ-lK-vC9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2565" y="-1727"/>
+        </scene>
+        <!--Popcorn Note View Controller - Note-->
+        <scene sceneID="NHQ-3D-ec2">
+            <objects>
+                <viewController id="8Jg-58-IyD" customClass="NHSCPopcornNoteViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y2S-b8-T0t"/>
+                        <viewControllerLayoutGuide type="bottom" id="pH7-KA-Jrx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NGh-22-OQo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bq4-ER-9Ah">
+                                <rect key="frame" x="20" y="80" width="280" height="370"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Note" id="8TN-gO-yrQ"/>
+                    <connections>
+                        <outlet property="noteText" destination="bq4-ER-9Ah" id="qV2-kk-r7H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5lf-PV-XEd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3059" y="-1727"/>
         </scene>
         <!--Donation Details View Controller - Donation Details-->
         <scene sceneID="2uf-WI-Ldq">

@@ -65,6 +65,7 @@
 		D69118951926418F00925BB0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D691187D1926418F00925BB0 /* UIKit.framework */; };
 		D691189D1926418F00925BB0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D691189B1926418F00925BB0 /* InfoPlist.strings */; };
 		D691189F1926418F00925BB0 /* Boy_ScoutsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D691189E1926418F00925BB0 /* Boy_ScoutsTests.m */; };
+		D6B1AC2A1928E5BB000EF655 /* NHSCPopcornNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B1AC291928E5BB000EF655 /* NHSCPopcornNoteViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -162,6 +163,8 @@
 		D691189A1926418F00925BB0 /* Boy ScoutsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Boy ScoutsTests-Info.plist"; sourceTree = "<group>"; };
 		D691189C1926418F00925BB0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D691189E1926418F00925BB0 /* Boy_ScoutsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Boy_ScoutsTests.m; sourceTree = "<group>"; };
+		D6B1AC281928E5BB000EF655 /* NHSCPopcornNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NHSCPopcornNoteViewController.h; sourceTree = "<group>"; };
+		D6B1AC291928E5BB000EF655 /* NHSCPopcornNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NHSCPopcornNoteViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,6 +265,8 @@
 		D691186D1926418F00925BB0 = {
 			isa = PBXGroup;
 			children = (
+				D6B1AC281928E5BB000EF655 /* NHSCPopcornNoteViewController.h */,
+				D6B1AC291928E5BB000EF655 /* NHSCPopcornNoteViewController.m */,
 				D66B275F1928848B0060ED61 /* NHSCPopcornDetailsViewController.h */,
 				D66B27601928848B0060ED61 /* NHSCPopcornDetailsViewController.m */,
 				D63DB1711928570600A3BA07 /* NHSCDonationDetailsViewController.h */,
@@ -506,6 +511,7 @@
 				753EF4D319283A4C00733F0D /* NHSCContactUsViewController.m in Sources */,
 				753EF4CE19281A9D00733F0D /* NHSCAboutUsViewController.m in Sources */,
 				D6821BD51926689900C079A7 /* NHSCMainViewController.m in Sources */,
+				D6B1AC2A1928E5BB000EF655 /* NHSCPopcornNoteViewController.m in Sources */,
 				D66B27611928848B0060ED61 /* NHSCPopcornDetailsViewController.m in Sources */,
 				D6821BF61926F4CE00C079A7 /* NHSCPopcornMapLocationViewController.m in Sources */,
 				D6821BCA19265B5400C079A7 /* AMSlideMenuContentSegue.m in Sources */,
